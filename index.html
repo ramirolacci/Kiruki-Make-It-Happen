@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/about.jpg">
+    <title>Kiruki Make It Happen</title>
+</head>
+<body>
+    <nav>
+        <div class="nav__header">
+            <div class="nav__logo">
+                <a href="#" class="nav__logo">
+                    <img src="assets/logo.png" alt="logo" class="logo-light">
+                    <img src="assets/logo.png" alt="logo" class="logo-dark">
+                </a>
+            </div>
+            <div class="nav__menu__btn" id="menu-btn">
+                <i class="ri-menu-3-line"></i>
+            </div>
+        </div>
+        <ul class="nav__links" id="nav-links">
+            <li><a class="active" href="#inicio">Inicio</a></li>
+            <li><a href="#productos">Productos</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#distribuidores">Distribuidores</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+            <li>
+                <a href="catalogo-productos/KIRUKI CATALOGO COLOREO 2025.pdf" target="_blank">
+                    <button class="btn">
+                        <span><i class="ri-download-fill"></i></span>
+                        Catálogo
+                    </button>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <header>
+        <div class="header__image" id="inicio">
+            <img src="assets/logo.png" alt="header">
+        </div>
+        <div class="header__content">
+            <h1>Desatá tu creatividad con Kiruki</h1>
+            <p class="section__description">
+            Encuentra todo lo que necesitas para un año escolar lleno de color y diversión. Ofrecemos una amplia
+            variedad de productos al por mayor, calidad garantizada y entrega rápida. Somos tu aliado ideal para
+            equipar librerias y negocios con los mejores productos del mercado. ¡Haz tu pedido hoy y prepárate
+            para una temporada escolar existosa!
+            </p>
+        </div>
+    </header>
+    <section class="product__container" id="productos">
+        <h3 class="section__subheader">Productos</h3>
+        <h2 class="section__header">Nuestros productos</h2>
+        <p class="section__description">
+            Explora nuestra exclusiva colección de productos de lujo, diseñados para ofrecer estilo y
+            rendimiento sin igual. Desde elegantes bolgrafos hasta gomas de borrar, nuestra colección es
+            perfecta para cada ocasión, garantizando una experiencia premium.
+        </p>
+        
+        <!-- Filtros de productos -->
+        <div class="product__filters">
+            <button class="filter__btn active" data-filter="todos">
+                <span>Todos</span>
+            </button>
+            <button class="filter__btn" data-filter="crayones">
+                <span>Crayones</span>
+            </button>
+            <button class="filter__btn" data-filter="pasteles">
+                <span>Pasteles al óleo</span>
+            </button>
+            <button class="filter__btn" data-filter="acuarelas">
+                <span>Acuarelas</span>
+            </button>
+            <button class="filter__btn" data-filter="lapices-colores">
+                <span>Lápices de colores</span>
+            </button>
+            <button class="filter__btn" data-filter="lapices-grafito">
+                <span>Lápices de grafito</span>
+            </button>
+            <button class="filter__btn" data-filter="marcadores">
+                <span>Marcadores</span>
+            </button>
+            <button class="filter__btn" data-filter="rollers-gel">
+                <span>Rollers gel</span>
+            </button>
+            <button class="filter__btn" data-filter="rollers-borrables">
+                <span>Rollers borrables</span>
+            </button>
+            <button class="filter__btn" data-filter="gomas">
+                <span>Gomas</span>
+            </button>
+            <button class="filter__btn" data-filter="sacapuntas">
+                <span>Sacapuntas</span>
+            </button>
+            <button class="filter__btn" data-filter="tijeras-escolares">
+                <span>Tijeras escolares</span>
+            </button>
+            <button class="filter__btn" data-filter="tijeras">
+                <span>Tijeras</span>
+            </button>
+            <button class="filter__btn" data-filter="adhesivo">
+                <span>Adhesivo sintético</span>
+            </button>
+            <button class="filter__btn" data-filter="boligrafos">
+                <span>Bolígrafos</span>
+            </button>
+            <button class="filter__btn" data-filter="microfibras">
+                <span>Microfibras</span>
+            </button>
+        </div>
+        
+        <div class="product__wrapper-1">
+            <div class="product__images">
+                <img src="assets/product1.png" alt="product">
+                <img src="assets/product2.png" alt="product">
+                <img src="assets/product3.png" alt="product">
+                <img src="assets/product4.png" alt="product">
+                <img src="assets/product5.png" alt="product">
+            </div>
+        </div>
+        <div class="product__wrapper-2">
+            <div class="product__images">
+                <img src="assets/product6.png" alt="product">
+                <img src="assets/product7.png" alt="product">
+                <img src="assets/product8.png" alt="product">
+                <img src="assets/product9.png" alt="product">
+                <img src="assets/product10.png" alt="product">
+                <img src="assets/product11.png" alt="product">
+                <img src="assets/product12.png" alt="product">
+            </div>
+        </div>
+    </section>
+    <section class="section__container about__container" id="nosotros">
+        <div class="about__image">
+            <img src="assets/about.jpg" alt="about">
+        </div>
+        <div class="about__content">
+            <h3 class="section__subheader">SOBRE NOSOTROS</h3>
+            <h2 class="section__header">¿Quienes somos?</h2>
+            <p class="section__description">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis nihil harum saepe cumque
+                voluptatem placeat laudantium quisquam perferendis aspernatur reprehenderit quia distinctio
+                tempore doloribus, consequuntur, eius quis quidem? Voluptatem, nostrum!
+            </p>
+            <p class="section__description">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis nulla ipsum ipsam
+                quisquam doloremque, temporibus quam dolor iste, nam vero ex! Aspernatur.
+            </p>
+        </div>
+    </section>
+    <section class="section__container feedback__container" id="distribuidores">
+        <h3 class="section__subheader">Nuestros Distribuidores</h3>
+        <h2 class="section__header">Distribuidores</h2>
+        <p class="section__description">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad nulla pariatur modi adipisci odit
+            placeat sit voluptatum, tenetur quibusdam quae optio hic culpa ea qui numquam maxime odio quam
+            expedita.
+        </p>
+        <!-- Slider main container -->
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div class="feedback__card">
+                <p class="section__description">
+                  Working with AdencyBD was a game-changer for our online
+                  presence. Their creativity and attention to detail exceeded our
+                  expectations.
+                </p>
+                <div class="feedback__details">
+                  <div class="feedback__user">
+                    <img src="assets/feedback-1.jpg" alt="feedback" />
+                    <div>
+                      <h4>James Carter</h4>
+                      <h5>CEO, TechNova Solutions</h5>
+                    </div>
+                  </div>
+                  <div class="feedback__rating">
+                    <span><i class="ri-star-fill"></i></span>
+                    <span><i class="ri-star-fill"></i></span>
+                    <span><i class="ri-star-fill"></i></span>
+                    <span><i class="ri-star-fill"></i></span>
+                    <span><i class="ri-star-fill"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="feedback__card">
+                <p class="section__description">
+                  The team at AdencyBD truly understands how to turn ideas into
+                  impactful digital experiences. Highly professional and reliable.
+                </p>
+                <div class="feedback__details">
+                  <div class="feedback__user">
+                    <img src="assets/feedback-2.jpg" alt="feedback" />
+                    <div>
+                      <h4>Sarah Mitchell</h4>
+                      <h5>Marketing Director, Green Organics</h5>
+                    </div>
+                  </div>
+                  <div class="feedback__rating">
+                    <span><i class="ri-star-fill"></i></span>
+                    <span><i class="ri-star-fill"></i></span>
+                    <span><i class="ri-star-fill"></i></span>
+                    <span><i class="ri-star-fill"></i></span>
+                    <span><i class="ri-star-fill"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="feedback__card">
+                <p class="section__description">
+                  From design to delivery, their process was seamless. Our new
+                  website looks stunning and performs better than ever in all
+                  aspects.
+                </p>
+                <div class="feedback__details">
+                  <div class="feedback__user">
+                    <img src="assets/feedback-3.jpg" alt="feedback" />
+                    <div>
+                      <h4>Anita Roy</h4>
+                      <h5>Founder, Roy Interiors</h5>
+                    </div>
+                  </div>
+                  <div class="feedback__rating">
+                    <span><i class="ri-star-fill"></i></span>
+                    <span><i class="ri-star-fill"></i></span>
+                    <span><i class="ri-star-fill"></i></span>
+                    <span><i class="ri-star-fill"></i></span>
+                    <span><i class="ri-star-fill"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="feedback__card">
+                <p class="section__description">
+                  AdencyBD helped us reimagine our brand identity with fresh
+                  visuals and an effective marketing strategy. We loved the
+                  collaboration!
+                </p>
+                <div class="feedback__details">
+                  <div class="feedback__user">
+                    <img src="assets/feedback-1.jpg" alt="feedback" />
+                    <div>
+                      <h4>David Kim</h4>
+                      <h5>Brand Manager, Urban Pulse</h5>
+                    </div>
+                  </div>
+                  <div class="feedback__rating">
+                    <span><i class="ri-star-fill"></i></span>
+                    <span><i class="ri-star-fill"></i></span>
+                    <span><i class="ri-star-fill"></i></span>
+                    <span><i class="ri-star-fill"></i></span>
+                    <span><i class="ri-star-fill"></i></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    <section class="section__container banner__container" id="contacto">
+      <h2 class="section__header">Contáctanos</h2>
+        <div class="feature__grid">
+          <div class="feature__card">
+            <span><i class="ri-whatsapp-line"></i></span>
+            <h3 class="section__subheader">Envíanos un mensaje o llamanos para cualquier consulta.</h3>
+            <a href="https://wa.link/yhjsgp" target="_blank">Enviar</a>
+          </div>
+          <div class="feature__card">
+            <span><i class="ri-mail-line"></i></span>
+            <h3 class="section__subheader">Envíanos un correo para mas detalles.</h3>
+            <a href="mailto:ventas@kiruki.com.ar">ventas@kiruki.com.ar</a>
+          </div>
+          <div class="feature__card">
+            <span><i class="ri-instagram-line"></i></span>
+            <h3 class="section__subheader">Síguenos para estar al tanto de las novedades.</h3>
+            <a href="https://www.instagram.com/kiruki_arg/?igsh=MWdlMXU3OXJieDNoNQ%3D%3D#" target="_blank">@kiruki_arg</a>
+          </div>    
+        </div>
+    </section>
+    <footer>
+        <div class="section__container footer__container">
+            <div class="footer__col">
+                <a href="#" class="footer__logo">
+                    <img src="assets/logo.png" alt="logo">
+                </a>
+                <p class="section__description">
+                    Encontranos en las mejores libreías del país.
+                </p>
+            </div>
+            <div class="footer__col">
+                <ul class="footer__links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#distribuidores">Distribuidores</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <ul class="footer__links-2">
+                    <li><a href="#"><i class="ri-phone-line"></i></a> +54 9 11 3628-6592</li>
+                    <li><a href="#"><i class="ri-mail-line"></i></a> ventas@kiruki.com.ar</li>
+                    <li><a href="#"><i class="ri-instagram-line"></i></a> @kiruki_arg</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__bar">
+            Copyright © 2025 Kiruki All rights reserved | Crafted by <a href="https://wa.link/otpwkm" target="_blank" class="link">Ramiro Lacci</a>.
+        </div>
+    </footer>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

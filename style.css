@@ -379,6 +379,51 @@ header{
     font-size: 1rem;
     color: goldenrod;
 }
+
+/* Estilos para la paginación del Swiper */
+.swiper-pagination {
+    position: relative;
+    margin-top: 2rem;
+}
+
+.swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background-color: var(--text-light);
+    opacity: 0.5;
+    transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: var(--text-dark);
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+/* Estilos para los botones de navegación del Swiper */
+.swiper-button-next,
+.swiper-button-prev {
+    color: var(--text-dark);
+    background-color: var(--white);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    background-color: var(--text-dark);
+    color: var(--white);
+    transform: scale(1.1);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 1rem;
+    font-weight: bold;
+}
 .banner__container{
     background-color: #dddada50;
     border-radius: 1.5rem;
@@ -462,6 +507,170 @@ header{
 ::-webkit-scrollbar-track{
     background-color: white;
 }
+
+/* Media queries para móviles */
+@media (max-width: 480px) {
+    .section__container {
+        padding: 3rem 0.5rem;
+    }
+    
+    .section__header {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+    
+    .section__subheader {
+        font-size: 0.9rem;
+    }
+    
+    .section__description {
+        font-size: 0.9rem;
+        line-height: 1.5rem;
+    }
+    
+    .header__content h1 {
+        font-size: 2.5rem;
+        line-height: 3rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .header__content {
+        padding-block: 1.5rem 3rem;
+        padding-inline: 0.5rem;
+    }
+    
+    /* En móviles, solo mostrar la imagen de fondo y ocultar el logo superpuesto */
+    .header__image {
+        background-image: url(assets/about.jpg);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        min-height: 200px;
+        box-shadow: none; /* Remover el efecto difuminado en móviles */
+    }
+    
+    .header__image img {
+        display: none;
+    }
+    
+    .product__container {
+        padding-block: 3rem;
+    }
+    
+    .product__container .section__description {
+        margin-bottom: 2rem;
+        padding-inline: 0.5rem;
+    }
+    
+    .product__filters {
+        gap: 0.3rem;
+        margin-bottom: 2rem;
+        padding-inline: 0.5rem;
+    }
+    
+    .filter__btn {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.65rem;
+    }
+    
+    .product__wrapper-1 .product__images img,
+    .product__wrapper-2 .product__images img {
+        max-width: 180px;
+    }
+    
+    .product__images {
+        gap: 0.8rem;
+    }
+    
+    .about__image img {
+        max-width: 100%;
+    }
+    
+    .feature__card {
+        padding: 0.8rem;
+        min-height: 180px;
+    }
+    
+    .feature__card span {
+        font-size: 1.2rem;
+        padding: 4px 8px;
+    }
+    
+    .feature__card h4 {
+        font-size: 0.9rem;
+    }
+    
+    .swiper-slide {
+        min-width: 280px;
+    }
+    
+    .feedback__card {
+        padding: 1rem 0.8rem;
+    }
+    
+    .feedback__details {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+    }
+    
+    .feedback__user h4 {
+        font-size: 1rem;
+    }
+    
+    .feedback__user h5 {
+        font-size: 0.8rem;
+    }
+    
+    .footer__container {
+        gap: 2rem 1rem;
+    }
+    
+    .footer__logo img {
+        max-width: 80px;
+    }
+    
+    .footer__bar {
+        font-size: 0.8rem;
+        padding: 0.8rem;
+    }
+    
+    .nav__logo .logo-light {
+        max-width: 80px;
+    }
+    
+    .btn {
+        padding: 0.4rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .section__header {
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+    }
+    
+    .header__content h1 {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+    
+    .product__wrapper-1 .product__images img,
+    .product__wrapper-2 .product__images img {
+        max-width: 150px;
+    }
+    
+    .filter__btn {
+        padding: 0.25rem 0.5rem;
+        font-size: 0.6rem;
+    }
+    
+    .swiper-slide {
+        min-width: 250px;
+    }
+}
+
 @media(width > 540px){
     .header__content h1{
         font-size: 5rem;
@@ -479,6 +688,15 @@ header{
     }
     .footer__container{
         grid-template-columns: repeat(2, 1fr);
+    }
+    /* Cards en tablets */
+    .product__cards-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .product__card {
+        max-width: 220px;
     }
 }
 @media(width > 768px){
@@ -594,6 +812,15 @@ header{
     .footer__col .section__description{
         max-width: 400px;
     }
+    /* Cards en desktop */
+    .product__cards-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+    }
+    
+    .product__card {
+        max-width: 250px;
+    }
 }
 @media(width > 1024px){
     .feature__card{
@@ -602,4 +829,1486 @@ header{
     .feedback__card {
         padding: 2rem 1.5rem;
       }
+}
+
+/* Estilos para las cards de productos */
+.product__cards-container {
+    margin-top: 2rem;
+}
+
+.product__cards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    padding-inline: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product__card {
+    background-color: var(--white);
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    max-width: 250px;
+    margin: 0 auto;
+}
+
+.product__card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.product__card-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background-color: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.product__card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.product__card:hover .product__card-image img {
+    transform: scale(1.05);
+}
+
+.product__card-image::before {
+    content: "Imagen del producto";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--text-light);
+    font-size: 0.9rem;
+    font-weight: 500;
+    z-index: 1;
+}
+
+.product__card-content {
+    padding: 1rem;
+}
+
+.product__card-content h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+    text-align: center;
+}
+
+.product__card-content p {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    line-height: 1.5;
+    text-align: center;
+}
+
+/* Eliminar estilos de precio */
+.product__card-price {
+    display: none;
+}
+
+/* Animaciones para las cards */
+.product__card {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.product__card:nth-child(1) { animation-delay: 0.1s; }
+.product__card:nth-child(2) { animation-delay: 0.2s; }
+.product__card:nth-child(3) { animation-delay: 0.3s; }
+.product__card:nth-child(4) { animation-delay: 0.4s; }
+.product__card:nth-child(5) { animation-delay: 0.5s; }
+.product__card:nth-child(6) { animation-delay: 0.6s; }
+.product__card:nth-child(7) { animation-delay: 0.7s; }
+.product__card:nth-child(8) { animation-delay: 0.8s; }
+.product__card:nth-child(9) { animation-delay: 0.9s; }
+.product__card:nth-child(10) { animation-delay: 1s; }
+.product__card:nth-child(11) { animation-delay: 1.1s; }
+.product__card:nth-child(12) { animation-delay: 1.2s; }
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilos responsive para cards de productos */
+.product__cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding-inline: 0.5rem;
+}
+
+.product__card {
+    max-width: 180px;
+}
+
+.product__card-content {
+    padding: 0.8rem;
+}
+
+.product__card-content h3 {
+    font-size: 0.9rem;
+}
+
+.product__card-content p {
+    font-size: 0.8rem;
+}
+
+.about__image img {
+    max-width: 100%;
+}
+
+/* Estilos específicos para las cards de crayones - estilo carrusel */
+.product__card[data-category="crayones"] {
+    background: none;
+    border: none;
+    box-shadow: none;
+    max-width: 250px;
+    margin: 0;
+    padding: 0;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.product__card[data-category="crayones"]:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.product__card[data-category="crayones"] img {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.product__card[data-category="crayones"]:hover img {
+    transform: scale(1.05);
+}
+
+/* Contenedor específico para crayones en grid de 6 columnas */
+.product__cards-grid[data-category="crayones"] {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Responsive para crayones */
+@media (max-width: 1200px) {
+    .product__cards-grid[data-category="crayones"] {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@media (max-width: 1024px) {
+    .product__cards-grid[data-category="crayones"] {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .product__cards-grid[data-category="crayones"] {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .product__cards-grid[data-category="crayones"] {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 360px) {
+    .product__cards-grid[data-category="crayones"] {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* Estilos específicos para las cards de pasteles al óleo - estilo carrusel */
+.product__card[data-category="pasteles"] {
+    background: none;
+    border: none;
+    box-shadow: none;
+    max-width: 250px;
+    margin: 0;
+    padding: 0;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.product__card[data-category="pasteles"]:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.product__card[data-category="pasteles"] img {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.product__card[data-category="pasteles"]:hover img {
+    transform: scale(1.05);
+}
+
+/* Contenedor específico para pasteles en grid de 6 columnas */
+.product__cards-grid[data-category="pasteles"] {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Responsive para pasteles */
+@media (max-width: 1200px) {
+    .product__cards-grid[data-category="pasteles"] {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@media (max-width: 1024px) {
+    .product__cards-grid[data-category="pasteles"] {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .product__cards-grid[data-category="pasteles"] {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .product__cards-grid[data-category="pasteles"] {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 360px) {
+    .product__cards-grid[data-category="pasteles"] {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* Estilos específicos para las cards de acuarelas - estilo carrusel */
+.product__card[data-category="acuarelas"] {
+    background: none;
+    border: none;
+    box-shadow: none;
+    max-width: 250px;
+    margin: 0;
+    padding: 0;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.product__card[data-category="acuarelas"]:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.product__card[data-category="acuarelas"] img {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.product__card[data-category="acuarelas"]:hover img {
+    transform: scale(1.05);
+}
+
+/* Contenedor específico para acuarelas en grid de 6 columnas */
+.product__cards-grid[data-category="acuarelas"] {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Responsive para acuarelas */
+@media (max-width: 1200px) {
+    .product__cards-grid[data-category="acuarelas"] {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@media (max-width: 1024px) {
+    .product__cards-grid[data-category="acuarelas"] {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .product__cards-grid[data-category="acuarelas"] {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .product__cards-grid[data-category="acuarelas"] {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 360px) {
+    .product__cards-grid[data-category="acuarelas"] {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* Estilos específicos para las cards de lápices de colores - estilo carrusel */
+.product__card[data-category="lapices-colores"] {
+    background: none;
+    border: none;
+    box-shadow: none;
+    max-width: 250px;
+    margin: 0;
+    padding: 0;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.product__card[data-category="lapices-colores"]:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.product__card[data-category="lapices-colores"] img {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.product__card[data-category="lapices-colores"]:hover img {
+    transform: scale(1.05);
+}
+
+/* Contenedor específico para lápices de colores en grid de 6 columnas */
+.product__cards-grid[data-category="lapices-colores"] {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Responsive para lápices de colores */
+@media (max-width: 1200px) {
+    .product__cards-grid[data-category="lapices-colores"] {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@media (max-width: 1024px) {
+    .product__cards-grid[data-category="lapices-colores"] {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .product__cards-grid[data-category="lapices-colores"] {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .product__cards-grid[data-category="lapices-colores"] {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 360px) {
+    .product__cards-grid[data-category="lapices-colores"] {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* Estilos específicos para las cards de lápices de grafito - estilo carrusel */
+.product__card[data-category="lapices-grafito"] {
+    background: none;
+    border: none;
+    box-shadow: none;
+    max-width: 250px;
+    margin: 0;
+    padding: 0;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.product__card[data-category="lapices-grafito"]:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.product__card[data-category="lapices-grafito"] img {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.product__card[data-category="lapices-grafito"]:hover img {
+    transform: scale(1.05);
+}
+
+/* Contenedor específico para lápices de grafito en grid de 6 columnas */
+.product__cards-grid[data-category="lapices-grafito"] {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Responsive para lápices de grafito */
+@media (max-width: 1200px) {
+    .product__cards-grid[data-category="lapices-grafito"] {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@media (max-width: 1024px) {
+    .product__cards-grid[data-category="lapices-grafito"] {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .product__cards-grid[data-category="lapices-grafito"] {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .product__cards-grid[data-category="lapices-grafito"] {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 360px) {
+    .product__cards-grid[data-category="lapices-grafito"] {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* Estilos específicos para las cards de marcadores - estilo carrusel */
+.product__card[data-category="marcadores"] {
+    background: none;
+    border: none;
+    box-shadow: none;
+    max-width: 250px;
+    margin: 0;
+    padding: 0;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.product__card[data-category="marcadores"]:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.product__card[data-category="marcadores"] img {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.product__card[data-category="marcadores"]:hover img {
+    transform: scale(1.05);
+}
+
+/* Ajuste específico para imágenes de marcadores que ya tienen sombra incorporada */
+.product__card[data-category="marcadores"] img[src*="0U3A7723-fococlipping-HD"],
+.product__card[data-category="marcadores"] img[src*="L1240425"],
+.product__card[data-category="marcadores"] img[src*="L1240445"],
+.product__card[data-category="marcadores"] img[src*="L1240449"] {
+    box-shadow: none;
+}
+
+/* Contenedor específico para marcadores en grid de 6 columnas */
+.product__cards-grid[data-category="marcadores"] {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Responsive para marcadores */
+@media (max-width: 1200px) {
+    .product__cards-grid[data-category="marcadores"] {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@media (max-width: 1024px) {
+    .product__cards-grid[data-category="marcadores"] {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .product__cards-grid[data-category="marcadores"] {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .product__cards-grid[data-category="marcadores"] {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 360px) {
+    .product__cards-grid[data-category="marcadores"] {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* Estilos específicos para las cards de rollers gel - estilo carrusel */
+.product__card[data-category="rollers-gel"] {
+    background: none;
+    border: none;
+    box-shadow: none;
+    max-width: 250px;
+    margin: 0;
+    padding: 0;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.product__card[data-category="rollers-gel"]:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.product__card[data-category="rollers-gel"] img {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.product__card[data-category="rollers-gel"]:hover img {
+    transform: scale(1.05);
+}
+
+/* Contenedor específico para rollers gel en grid de 6 columnas */
+.product__cards-grid[data-category="rollers-gel"] {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Responsive para rollers gel */
+@media (max-width: 1200px) {
+    .product__cards-grid[data-category="rollers-gel"] {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@media (max-width: 1024px) {
+    .product__cards-grid[data-category="rollers-gel"] {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .product__cards-grid[data-category="rollers-gel"] {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .product__cards-grid[data-category="rollers-gel"] {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 360px) {
+    .product__cards-grid[data-category="rollers-gel"] {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* Estilos específicos para las cards de rollers borrables - estilo carrusel */
+.product__card[data-category="rollers-borrables"] {
+    background: none;
+    border: none;
+    box-shadow: none;
+    max-width: 250px;
+    margin: 0;
+    padding: 0;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.product__card[data-category="rollers-borrables"]:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.product__card[data-category="rollers-borrables"] img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 1rem;
+    transition: transform 0.3s ease;
+    background-color: #f8f9fa;
+}
+
+.product__card[data-category="rollers-borrables"]:hover img {
+    transform: scale(1.05);
+}
+
+/* Contenedor específico para rollers borrables en grid de 6 columnas */
+.product__cards-grid[data-category="rollers-borrables"] {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Responsive para rollers borrables */
+@media (max-width: 1200px) {
+    .product__cards-grid[data-category="rollers-borrables"] {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@media (max-width: 1024px) {
+    .product__cards-grid[data-category="rollers-borrables"] {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .product__cards-grid[data-category="rollers-borrables"] {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .product__cards-grid[data-category="rollers-borrables"] {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 360px) {
+    .product__cards-grid[data-category="rollers-borrables"] {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* Estilos específicos para las cards de gomas - estilo carrusel */
+.product__card[data-category="gomas"] {
+    background: none;
+    border: none;
+    box-shadow: none;
+    max-width: 250px;
+    margin: 0;
+    padding: 0;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.product__card[data-category="gomas"]:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.product__card[data-category="gomas"] img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 1rem;
+    transition: transform 0.3s ease;
+    background-color: #f8f9fa;
+}
+
+.product__card[data-category="gomas"]:hover img {
+    transform: scale(1.05);
+}
+
+/* Contenedor específico para gomas en grid de 6 columnas */
+.product__cards-grid[data-category="gomas"] {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Responsive para gomas */
+@media (max-width: 1200px) {
+    .product__cards-grid[data-category="gomas"] {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@media (max-width: 1024px) {
+    .product__cards-grid[data-category="gomas"] {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .product__cards-grid[data-category="gomas"] {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .product__cards-grid[data-category="gomas"] {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 360px) {
+    .product__cards-grid[data-category="gomas"] {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* Estilos específicos para las cards de sacapuntas - estilo carrusel */
+.product__card[data-category="sacapuntas"] {
+    background: none;
+    border: none;
+    box-shadow: none;
+    max-width: 250px;
+    margin: 0;
+    padding: 0;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.product__card[data-category="sacapuntas"]:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.product__card[data-category="sacapuntas"] img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 1rem;
+    transition: transform 0.3s ease;
+    background-color: #f8f9fa;
+}
+
+.product__card[data-category="sacapuntas"]:hover img {
+    transform: scale(1.05);
+}
+
+/* Contenedor específico para sacapuntas en grid de 6 columnas */
+.product__cards-grid[data-category="sacapuntas"] {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Responsive para sacapuntas */
+@media (max-width: 1200px) {
+    .product__cards-grid[data-category="sacapuntas"] {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@media (max-width: 1024px) {
+    .product__cards-grid[data-category="sacapuntas"] {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .product__cards-grid[data-category="sacapuntas"] {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .product__cards-grid[data-category="sacapuntas"] {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 360px) {
+    .product__cards-grid[data-category="sacapuntas"] {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* Estilos específicos para las cards de tijeras escolares - estilo carrusel */
+.product__card[data-category="tijeras-escolares"] {
+    background: none;
+    border: none;
+    box-shadow: none;
+    max-width: 250px;
+    margin: 0;
+    padding: 0;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.product__card[data-category="tijeras-escolares"]:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.product__card[data-category="tijeras-escolares"] img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 1rem;
+    transition: transform 0.3s ease;
+    background-color: #f8f9fa;
+}
+
+.product__card[data-category="tijeras-escolares"]:hover img {
+    transform: scale(1.05);
+}
+
+/* Contenedor específico para tijeras escolares en grid de 6 columnas */
+.product__cards-grid[data-category="tijeras-escolares"] {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Responsive para tijeras escolares */
+@media (max-width: 1200px) {
+    .product__cards-grid[data-category="tijeras-escolares"] {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@media (max-width: 1024px) {
+    .product__cards-grid[data-category="tijeras-escolares"] {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .product__cards-grid[data-category="tijeras-escolares"] {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .product__cards-grid[data-category="tijeras-escolares"] {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 360px) {
+    .product__cards-grid[data-category="tijeras-escolares"] {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* Estilos específicos para las cards de tijeras - estilo carrusel */
+.product__card[data-category="tijeras"] {
+    background: none;
+    border: none;
+    box-shadow: none;
+    max-width: 250px;
+    margin: 0;
+    padding: 0;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.product__card[data-category="tijeras"]:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.product__card[data-category="tijeras"] img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 1rem;
+    transition: transform 0.3s ease;
+    background-color: #f8f9fa;
+}
+
+.product__card[data-category="tijeras"]:hover img {
+    transform: scale(1.05);
+}
+
+/* Contenedor específico para tijeras en grid de 6 columnas */
+.product__cards-grid[data-category="tijeras"] {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Responsive para tijeras */
+@media (max-width: 1200px) {
+    .product__cards-grid[data-category="tijeras"] {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@media (max-width: 1024px) {
+    .product__cards-grid[data-category="tijeras"] {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .product__cards-grid[data-category="tijeras"] {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .product__cards-grid[data-category="tijeras"] {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 360px) {
+    .product__cards-grid[data-category="tijeras"] {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* Estilos específicos para las cards de adhesivo sintético - estilo carrusel */
+.product__card[data-category="adhesivo"] {
+    background: none;
+    border: none;
+    box-shadow: none;
+    max-width: 250px;
+    margin: 0;
+    padding: 0;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.product__card[data-category="adhesivo"]:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.product__card[data-category="adhesivo"] img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 1rem;
+    transition: transform 0.3s ease;
+    background-color: #f8f9fa;
+}
+
+.product__card[data-category="adhesivo"]:hover img {
+    transform: scale(1.05);
+}
+
+/* Contenedor específico para adhesivo sintético en grid de 6 columnas */
+.product__cards-grid[data-category="adhesivo"] {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Responsive para adhesivo sintético */
+@media (max-width: 1200px) {
+    .product__cards-grid[data-category="adhesivo"] {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@media (max-width: 1024px) {
+    .product__cards-grid[data-category="adhesivo"] {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .product__cards-grid[data-category="adhesivo"] {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .product__cards-grid[data-category="adhesivo"] {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 360px) {
+    .product__cards-grid[data-category="adhesivo"] {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* Estilos específicos para las cards de bolígrafos - estilo carrusel */
+.product__card[data-category="boligrafos"] {
+    background: none;
+    border: none;
+    box-shadow: none;
+    max-width: 250px;
+    margin: 0;
+    padding: 0;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.product__card[data-category="boligrafos"]:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.product__card[data-category="boligrafos"] img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 1rem;
+    transition: transform 0.3s ease;
+    background-color: #f8f9fa;
+}
+
+.product__card[data-category="boligrafos"]:hover img {
+    transform: scale(1.05);
+}
+
+/* Contenedor específico para bolígrafos en grid de 6 columnas */
+.product__cards-grid[data-category="boligrafos"] {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Responsive para bolígrafos */
+@media (max-width: 1200px) {
+    .product__cards-grid[data-category="boligrafos"] {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@media (max-width: 1024px) {
+    .product__cards-grid[data-category="boligrafos"] {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .product__cards-grid[data-category="boligrafos"] {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .product__cards-grid[data-category="boligrafos"] {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 360px) {
+    .product__cards-grid[data-category="boligrafos"] {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* Estilos específicos para las cards de microfibras - estilo carrusel */
+.product__card[data-category="microfibras"] {
+    background: none;
+    border: none;
+    box-shadow: none;
+    max-width: 250px;
+    margin: 0;
+    padding: 0;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.product__card[data-category="microfibras"]:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.product__card[data-category="microfibras"] img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 1rem;
+    transition: transform 0.3s ease;
+    background-color: #f8f9fa;
+}
+
+.product__card[data-category="microfibras"]:hover img {
+    transform: scale(1.05);
+}
+
+/* Contenedor específico para microfibras en grid de 6 columnas */
+.product__cards-grid[data-category="microfibras"] {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Responsive para microfibras */
+@media (max-width: 1200px) {
+    .product__cards-grid[data-category="microfibras"] {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@media (max-width: 1024px) {
+    .product__cards-grid[data-category="microfibras"] {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .product__cards-grid[data-category="microfibras"] {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .product__cards-grid[data-category="microfibras"] {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 360px) {
+    .product__cards-grid[data-category="microfibras"] {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* Estilos para la palabra Kiruki en el footer con colores del logo */
+.kiruki-logo {
+    font-weight: 700;
+}
+
+.kiruki-logo .k1 {
+    color: #EA6FA3; /* Primera K */
+}
+
+.kiruki-logo .i1 {
+    color: #F39051; /* Primera I */
+}
+
+.kiruki-logo .r {
+    color: #FBC101; /* R */
+}
+
+.kiruki-logo .u {
+    color: #B7CC23; /* U */
+}
+
+.kiruki-logo .k2 {
+    color: #2EB5A7; /* Segunda K */
+}
+
+.kiruki-logo .i2 {
+    color: #56C1EB; /* Segunda I */
+}
+
+.mih-logo {
+    font-family: 'Caveat', cursive;
+    font-size: 1.2rem;
+    color: #000000;
+}
+
+/* Modal con efecto Parallax */
+.modal-parallax {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.modal-parallax.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.modal-content {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    height: 90vh;
+    background: transparent;
+    border-radius: 0;
+    overflow: hidden;
+    box-shadow: none;
+    border: none;
+    transform: scale(0.7);
+    transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.modal-parallax.active .modal-content {
+    transform: scale(1);
+}
+
+.modal-close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    border: none;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    font-size: 32px;
+    cursor: pointer;
+    z-index: 10000;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.modal-close:hover {
+    background: rgba(255, 255, 255, 1);
+    transform: scale(1.3) rotate(180deg);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.parallax-container {
+    position: relative;
+    width: 100%;
+    height: 80%;
+    overflow: hidden;
+    background: transparent;
+    perspective: 3000px;
+    display: flex;
+    align-items: center;
+}
+
+.parallax-image {
+    position: relative;
+    left: 10%;
+    transform: perspective(3000px);
+    width: 50%;
+    height: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    transition: transform 0.05s ease;
+}
+
+.parallax-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 0;
+    box-shadow: none;
+    transition: transform 0.3s ease;
+    filter: none;
+}
+
+.parallax-layers {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    perspective: 2500px;
+}
+
+.parallax-layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.1;
+    transition: transform 0.05s ease;
+    transform-style: preserve-3d;
+}
+
+.layer-1 {
+    background-image: 
+        radial-gradient(circle, rgba(255, 255, 255, 0.2) 1px, transparent 1px),
+        radial-gradient(circle, rgba(255, 255, 255, 0.1) 2px, transparent 2px);
+    background-size: 60px 60px, 120px 120px;
+    animation: float3D 6s ease-in-out infinite;
+    transform: translateZ(200px);
+}
+
+.layer-2 {
+    background-image: 
+        linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%),
+        linear-gradient(-45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%);
+    background-size: 100px 100px;
+    animation: float3D 10s ease-in-out infinite reverse;
+    transform: translateZ(400px);
+}
+
+.layer-3 {
+    background-image: 
+        radial-gradient(circle, rgba(255, 255, 255, 0.05) 3px, transparent 3px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 150px 150px, 80px 80px;
+    animation: float3D 14s ease-in-out infinite;
+    transform: translateZ(600px);
+}
+
+@keyframes float3D {
+    0%, 100% { 
+        transform: translateZ(200px) translateY(0px) rotateX(0deg) rotateY(0deg) scale(1); 
+    }
+    25% { 
+        transform: translateZ(300px) translateY(-40px) rotateX(10deg) rotateY(15deg) scale(1.1); 
+    }
+    50% { 
+        transform: translateZ(400px) translateY(-70px) rotateX(20deg) rotateY(30deg) scale(1.2); 
+    }
+    75% { 
+        transform: translateZ(300px) translateY(-40px) rotateX(10deg) rotateY(15deg) scale(1.1); 
+    }
+}
+
+.product-info {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40%;
+    padding: 3rem;
+    text-align: left;
+    background: transparent;
+    opacity: 0;
+    transition: all 0.8s ease;
+    z-index: 10;
+}
+
+.modal-parallax.active .product-info {
+    opacity: 1;
+}
+
+.product-info h3 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 1.5rem;
+    text-shadow: none;
+    transform-style: preserve-3d;
+    transition: transform 0.1s ease;
+}
+
+.product-info p {
+    font-size: 1.2rem;
+    color: #333333;
+    line-height: 1.8;
+    text-shadow: none;
+    transform-style: preserve-3d;
+    transition: transform 0.1s ease;
 }

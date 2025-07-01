@@ -7,7 +7,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="assets/about.jpg">
-    <title>Kiruki Make It Happen</title>
+    <title>Kiruki - Make It Happen</title>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav>
@@ -113,24 +116,586 @@
             </button>
         </div>
         
-        <div class="product__wrapper-1">
-            <div class="product__images">
-                <img src="assets/product1.png" alt="product">
-                <img src="assets/product2.png" alt="product">
-                <img src="assets/product3.png" alt="product">
-                <img src="assets/product4.png" alt="product">
-                <img src="assets/product5.png" alt="product">
+        <!-- Contenedor para carruseles (visible solo en "Todos") -->
+        <div class="product__carousels" id="product-carousels">
+            <div class="product__wrapper-1">
+                <div class="product__images">
+                    <img src="assets/product1.png" alt="product">
+                    <img src="assets/product2.png" alt="product">
+                    <img src="assets/product3.png" alt="product">
+                    <img src="assets/product4.png" alt="product">
+                    <img src="assets/product5.png" alt="product">
+                </div>
+            </div>
+            <div class="product__wrapper-2">
+                <div class="product__images">
+                    <img src="assets/product6.png" alt="product">
+                    <img src="assets/product7.png" alt="product">
+                    <img src="assets/product8.png" alt="product">
+                    <img src="assets/product9.png" alt="product">
+                    <img src="assets/product10.png" alt="product">
+                    <img src="assets/product11.png" alt="product">
+                    <img src="assets/product12.png" alt="product">
+                </div>
             </div>
         </div>
-        <div class="product__wrapper-2">
-            <div class="product__images">
-                <img src="assets/product6.png" alt="product">
-                <img src="assets/product7.png" alt="product">
-                <img src="assets/product8.png" alt="product">
-                <img src="assets/product9.png" alt="product">
-                <img src="assets/product10.png" alt="product">
-                <img src="assets/product11.png" alt="product">
-                <img src="assets/product12.png" alt="product">
+        
+        <!-- Contenedor para cards de productos (visible en filtros específicos) -->
+        <div class="product__cards-container" id="product-cards" style="display: none;">
+            <div class="product__cards-grid" data-category="crayones">
+                <!-- Cards de Crayones - Estilo carrusel -->
+                <div class="product__card" data-category="crayones">
+                    <img src="assets/products/crayones/800001-Crayon.png" alt="Crayones Kiruki 800001">
+                </div>
+                
+                <div class="product__card" data-category="crayones">
+                    <img src="assets/products/crayones/800001.png" alt="Crayones Kiruki 800001">
+                </div>
+                
+                <div class="product__card" data-category="crayones">
+                    <img src="assets/products/crayones/800002-Crayon.png" alt="Crayones Kiruki 800002">
+                </div>
+                
+                <div class="product__card" data-category="crayones">
+                    <img src="assets/products/crayones/800002-2.png" alt="Crayones Kiruki 800002">
+                </div>
+                
+                <div class="product__card" data-category="crayones">
+                    <img src="assets/products/crayones/800003-Crayon.png" alt="Crayones Kiruki 800003">
+                </div>
+                
+                <div class="product__card" data-category="crayones">
+                    <img src="assets/products/crayones/800003-1.png" alt="Crayones Kiruki 800003">
+                </div>
+                
+                <div class="product__card" data-category="crayones">
+                    <img src="assets/products/crayones/800004-Crayon.png" alt="Crayones Kiruki 800004">
+                </div>
+                
+                <div class="product__card" data-category="crayones">
+                    <img src="assets/products/crayones/800004-1.png" alt="Crayones Kiruki 800004">
+                    </div>
+                
+                <div class="product__card" data-category="crayones">
+                    <img src="assets/products/crayones/800005-Crayon 01.png" alt="Crayones Kiruki 800005">
+                    </div>
+                
+                <div class="product__card" data-category="crayones">
+                    <img src="assets/products/crayones/800005-1.png" alt="Crayones Kiruki 800005">
+                </div>
+                
+                <div class="product__card" data-category="crayones">
+                    <img src="assets/products/crayones/800007- Crayon 01.png" alt="Crayones Kiruki 800007">
+                    </div>
+                
+                <div class="product__card" data-category="crayones">
+                    <img src="assets/products/crayones/800007.png" alt="Crayones Kiruki 800007">
+                    </div>
+                
+                <!-- Cards de Pasteles al óleo - Estilo carrusel -->
+                <div class="product__card" data-category="pasteles">
+                    <img src="assets/products/pasteles al oleo/800006-Pastel.png" alt="Pasteles al óleo Kiruki 800006">
+                </div>
+                
+                <div class="product__card" data-category="pasteles">
+                    <img src="assets/products/pasteles al oleo/800006-1.png" alt="Pasteles al óleo Kiruki 800006">
+                </div>
+                
+                <!-- Cards de Acuarelas - Estilo carrusel -->
+                <div class="product__card" data-category="acuarelas">
+                    <img src="assets/products/acuarelas/900001-1.png" alt="Acuarelas Kiruki 900001">
+                </div>
+                
+                <div class="product__card" data-category="acuarelas">
+                    <img src="assets/products/acuarelas/DSC_0006.png" alt="Acuarelas Kiruki">
+                </div>
+                
+                <div class="product__card" data-category="acuarelas">
+                    <img src="assets/products/acuarelas/900002-1.png" alt="Acuarelas Kiruki 900002">
+                    </div>
+                
+                <div class="product__card" data-category="acuarelas">
+                    <img src="assets/products/acuarelas/900002-3.png" alt="Acuarelas Kiruki 900002">
+                    </div>
+                
+                <div class="product__card" data-category="acuarelas">
+                    <img src="assets/products/acuarelas/900003.png" alt="Acuarelas Kiruki 900003">
+                </div>
+                
+                <div class="product__card" data-category="acuarelas">
+                    <img src="assets/products/acuarelas/900003-1.png" alt="Acuarelas Kiruki 900003">
+                </div>
+                
+                <!-- Cards de Lápices de colores - Estilo carrusel -->
+                <div class="product__card" data-category="lapices-colores">
+                    <img src="assets/products/lapices de colores/600007.png" alt="Lápices de colores Kiruki 600007">
+                </div>
+                
+                <div class="product__card" data-category="lapices-colores">
+                    <img src="assets/products/lapices de colores/IMG_4996.png" alt="Lápices de colores Kiruki">
+                </div>
+                
+                <div class="product__card" data-category="lapices-colores">
+                    <img src="assets/products/lapices de colores/IMG_5000.png" alt="Lápices de colores Kiruki">
+                </div>
+                
+                <div class="product__card" data-category="lapices-colores">
+                    <img src="assets/products/lapices de colores/IMG_5002.png" alt="Lápices de colores Kiruki">
+                </div>
+                
+                <div class="product__card" data-category="lapices-colores">
+                    <img src="assets/products/lapices de colores/IMG_6283(1).png" alt="Lápices de colores Kiruki">
+                    </div>
+                
+                <div class="product__card" data-category="lapices-colores">
+                    <img src="assets/products/lapices de colores/IMG_6286(1).png" alt="Lápices de colores Kiruki">
+                    </div>
+                
+                <div class="product__card" data-category="lapices-colores">
+                    <img src="assets/products/lapices de colores/IMG_6290(1).png" alt="Lápices de colores Kiruki">
+                </div>
+                
+                <div class="product__card" data-category="lapices-colores">
+                    <img src="assets/products/lapices de colores/IMG_6301(1).png" alt="Lápices de colores Kiruki">
+                </div>
+                
+                <!-- Cards de Lápices de grafito - Estilo carrusel -->
+                <div class="product__card" data-category="lapices-grafito">
+                    <img src="assets/products/lapices de grafito/Grafitos Pastel.png" alt="Lápices de grafito Kiruki Grafitos Pastel">
+                </div>
+                
+                <div class="product__card" data-category="lapices-grafito">
+                    <img src="assets/products/lapices de grafito/Grafitos Pastel x 36.png" alt="Lápices de grafito Kiruki Grafitos Pastel x 36">
+                </div>
+                
+                <div class="product__card" data-category="lapices-grafito">
+                    <img src="assets/products/lapices de grafito/IMG_5043.png" alt="Lápices de grafito Kiruki">
+                    </div>
+                
+                <div class="product__card" data-category="lapices-grafito">
+                    <img src="assets/products/lapices de grafito/Grafito Neon x 36.png" alt="Lápices de grafito Kiruki Grafito Neon x 36">
+                    </div>
+                
+                <div class="product__card" data-category="lapices-grafito">
+                    <img src="assets/products/lapices de grafito/Grafito Metallic x 36.png" alt="Lápices de grafito Kiruki Grafito Metallic x 36">
+                </div>
+                
+                <div class="product__card" data-category="lapices-grafito">
+                    <img src="assets/products/lapices de grafito/Grafito Metallic x 36 2.png" alt="Lápices de grafito Kiruki Grafito Metallic x 36">
+                </div>
+                
+                <!-- Cards de Marcadores - Estilo carrusel -->
+                <div class="product__card" data-category="marcadores">
+                    <img src="assets/products/marcadores/0U3A7716-fococlipping-HD.png" alt="Marcadores Kiruki">
+                </div>
+                
+                <div class="product__card" data-category="marcadores">
+                    <img src="assets/products/marcadores/0U3A7720-fococlipping-HD.png" alt="Marcadores Kiruki">
+                </div>
+                
+                <div class="product__card" data-category="marcadores">
+                    <img src="assets/products/marcadores/0U3A7721-fococlipping-HD.png" alt="Marcadores Kiruki">
+                </div>
+                
+                <div class="product__card" data-category="marcadores">
+                    <img src="assets/products/marcadores/0U3A7723-fococlipping-HD.png" alt="Marcadores Kiruki">
+                </div>
+                
+                <div class="product__card" data-category="marcadores">
+                    <img src="assets/products/marcadores/0U3A7724-fococlipping-HD.png" alt="Marcadores Kiruki">
+                </div>
+                
+                <div class="product__card" data-category="marcadores">
+                    <img src="assets/products/marcadores/0U3A7726-fococlipping-HD.png" alt="Marcadores Kiruki">
+                </div>
+                
+                <div class="product__card" data-category="marcadores">
+                    <img src="assets/products/marcadores/0U3A7727-fococlipping-HD.png" alt="Marcadores Kiruki">
+                </div>
+                
+                <div class="product__card" data-category="marcadores">
+                    <img src="assets/products/marcadores/0U3A7730-fococlipping-HD.png" alt="Marcadores Kiruki">
+                </div>
+                
+                <div class="product__card" data-category="marcadores">
+                    <img src="assets/products/marcadores/1.4.png" alt="Marcadores Kiruki">
+                </div>
+                
+                <div class="product__card" data-category="marcadores">
+                    <img src="assets/products/marcadores/L1240445.png" alt="Marcadores Kiruki">
+                </div>
+                
+                <div class="product__card" data-category="marcadores">
+                    <img src="assets/products/marcadores/L1240425.png" alt="Marcadores Kiruki">
+                    </div>
+                
+                <div class="product__card" data-category="marcadores">
+                    <img src="assets/products/marcadores/L1240449.png" alt="Marcadores Kiruki">
+                    </div>
+                
+                <div class="product__card" data-category="marcadores">
+                    <img src="assets/products/marcadores/0U3A7712-fococlipping-HD - copia.png" alt="Marcadores Kiruki">
+                </div>
+                
+                <div class="product__card" data-category="marcadores">
+                    <img src="assets/products/marcadores/0U3A7715-fococlipping-HD.png" alt="Marcadores Kiruki">
+                </div>
+                
+                <!-- Cards de Rollers gel - Estilo carrusel -->
+                <div class="product__card" data-category="rollers-gel">
+                    <img src="assets/products/rollers gel/0U3A7539-fococlipping-HD - copia (1).png" alt="Rollers gel Kiruki">
+                    </div>
+                
+                <div class="product__card" data-category="rollers-gel">
+                    <img src="assets/products/rollers gel/0U3A7541-fococlipping-HD (1).png" alt="Rollers gel Kiruki">
+                    </div>
+                
+                <div class="product__card" data-category="rollers-gel">
+                    <img src="assets/products/rollers gel/0U3A7542-fococlipping-HD (1).png" alt="Rollers gel Kiruki">
+                </div>
+                
+                <div class="product__card" data-category="rollers-gel">
+                    <img src="assets/products/rollers gel/0U3A7544-fococlipping-HD (1).png" alt="Rollers gel Kiruki">
+                </div>
+                
+                <!-- Cards de Rollers borrables - Estilo carrusel -->
+                <div class="product__card" data-category="rollers-borrables">
+                    <img src="assets/products/rollers borrables/120001.png" alt="Rollers borrables Kiruki 120001">
+                </div>
+                
+                <div class="product__card" data-category="rollers-borrables">
+                    <img src="assets/products/rollers borrables/120001_b.png" alt="Rollers borrables Kiruki 120001">
+                </div>
+                
+                <div class="product__card" data-category="rollers-borrables">
+                    <img src="assets/products/rollers borrables/120002.png" alt="Rollers borrables Kiruki 120002">
+                </div>
+                
+                <div class="product__card" data-category="rollers-borrables">
+                    <img src="assets/products/rollers borrables/120002_b.png" alt="Rollers borrables Kiruki 120002">
+                </div>
+                
+                <div class="product__card" data-category="rollers-borrables">
+                    <img src="assets/products/rollers borrables/120003.png" alt="Rollers borrables Kiruki 120003">
+                </div>
+                
+                <div class="product__card" data-category="rollers-borrables">
+                    <img src="assets/products/rollers borrables/120003_b.png" alt="Rollers borrables Kiruki 120003">
+                </div>
+                
+                <div class="product__card" data-category="rollers-borrables">
+                    <img src="assets/products/rollers borrables/CUTE CYAN.png" alt="Rollers borrables Kiruki CUTE CYAN">
+                </div>
+                
+                <div class="product__card" data-category="rollers-borrables">
+                    <img src="assets/products/rollers borrables/CUTE-MANZANA.png" alt="Rollers borrables Kiruki CUTE MANZANA">
+                    </div>
+                
+                <div class="product__card" data-category="rollers-borrables">
+                    <img src="assets/products/rollers borrables/CUTE-ROSA.png" alt="Rollers borrables Kiruki CUTE ROSA">
+                    </div>
+                
+                <div class="product__card" data-category="rollers-borrables">
+                    <img src="assets/products/rollers borrables/X-TRAS AZUL.png" alt="Rollers borrables Kiruki X-TRAS AZUL">
+                </div>
+                
+                <div class="product__card" data-category="rollers-borrables">
+                    <img src="assets/products/rollers borrables/X-TRAS-CELESTE.png" alt="Rollers borrables Kiruki X-TRAS CELESTE">
+                </div>
+                
+                <!-- Cards de Gomas - Estilo carrusel -->
+                <div class="product__card" data-category="gomas">
+                    <img src="assets/products/gomas de borrar/170005-.png" alt="Gomas de borrar Kiruki 170005">
+                </div>
+                
+                <div class="product__card" data-category="gomas">
+                    <img src="assets/products/gomas de borrar/Goma Techink x 1.png" alt="Gomas de borrar Kiruki Goma Techink x 1">
+                </div>
+                
+                <div class="product__card" data-category="gomas">
+                    <img src="assets/products/gomas de borrar/Goma Techink x 36.png" alt="Gomas de borrar Kiruki Goma Techink x 36">
+                </div>
+                
+                <div class="product__card" data-category="gomas">
+                    <img src="assets/products/gomas de borrar/IMG_5024.png" alt="Gomas de borrar Kiruki">
+                </div>
+                
+                <div class="product__card" data-category="gomas">
+                    <img src="assets/products/gomas de borrar/IMG_5079.png" alt="Gomas de borrar Kiruki">
+                </div>
+                
+                <div class="product__card" data-category="gomas">
+                    <img src="assets/products/gomas de borrar/IMG_5281.png" alt="Gomas de borrar Kiruki">
+                </div>
+                
+                <div class="product__card" data-category="gomas">
+                    <img src="assets/products/gomas de borrar/IMG_5284.png" alt="Gomas de borrar Kiruki">
+                </div>
+                
+                <div class="product__card" data-category="gomas">
+                    <img src="assets/products/gomas de borrar/IMG_5424.png" alt="Gomas de borrar Kiruki">
+                </div>
+                
+                <div class="product__card" data-category="gomas">
+                    <img src="assets/products/gomas de borrar/IMG_5364.png" alt="Gomas de borrar Kiruki">
+                </div>
+                
+                <div class="product__card" data-category="gomas">
+                    <img src="assets/products/gomas de borrar/IMG_5367.png" alt="Gomas de borrar Kiruki">
+                </div>
+                
+                <div class="product__card" data-category="gomas">
+                    <img src="assets/products/gomas de borrar/IMG_5378.png" alt="Gomas de borrar Kiruki">
+                </div>
+                
+                <div class="product__card" data-category="gomas">
+                    <img src="assets/products/gomas de borrar/IMG_5380.png" alt="Gomas de borrar Kiruki">
+                </div>
+                
+                <div class="product__card" data-category="gomas">
+                    <img src="assets/products/gomas de borrar/IMG_5357.png" alt="Gomas de borrar Kiruki">
+                </div>
+                
+                <div class="product__card" data-category="gomas">
+                    <img src="assets/products/gomas de borrar/IMG_5390.png" alt="Gomas de borrar Kiruki">
+                </div>
+                
+                <div class="product__card" data-category="gomas">
+                    <img src="assets/products/gomas de borrar/IMG_5394.png" alt="Gomas de borrar Kiruki">
+                    </div>
+                
+                <div class="product__card" data-category="gomas">
+                    <img src="assets/products/gomas de borrar/IMG_5396.png" alt="Gomas de borrar Kiruki">
+                    </div>
+                
+                <div class="product__card" data-category="gomas">
+                    <img src="assets/products/gomas de borrar/IMG_5400.png" alt="Gomas de borrar Kiruki">
+                </div>
+                
+                <div class="product__card" data-category="gomas">
+                    <img src="assets/products/gomas de borrar/IMG_5403.png" alt="Gomas de borrar Kiruki">
+                </div>
+                
+                <!-- Cards de Sacapuntas - Estilo carrusel -->
+                <div class="product__card" data-category="sacapuntas">
+                    <img src="assets/products/sacapuntas/160001-1.png" alt="Sacapuntas Kiruki 160001">
+                </div>
+                
+                <div class="product__card" data-category="sacapuntas">
+                    <img src="assets/products/sacapuntas/160001-8.png" alt="Sacapuntas Kiruki 160001">
+                </div>
+                
+                <div class="product__card" data-category="sacapuntas">
+                    <img src="assets/products/sacapuntas/160005-1.png" alt="Sacapuntas Kiruki 160005">
+                </div>
+                
+                <div class="product__card" data-category="sacapuntas">
+                    <img src="assets/products/sacapuntas/160005-3.png" alt="Sacapuntas Kiruki 160005">
+                </div>
+                
+                <div class="product__card" data-category="sacapuntas">
+                    <img src="assets/products/sacapuntas/IMG_5072.png" alt="Sacapuntas Kiruki">
+                </div>
+                
+                <div class="product__card" data-category="sacapuntas">
+                    <img src="assets/products/sacapuntas/IMG_5219.png" alt="Sacapuntas Kiruki">
+                </div>
+                
+                <div class="product__card" data-category="sacapuntas">
+                    <img src="assets/products/sacapuntas/IMG_5359.png" alt="Sacapuntas Kiruki">
+                </div>
+                
+                <div class="product__card" data-category="sacapuntas">
+                    <img src="assets/products/sacapuntas/IMG_5372.png" alt="Sacapuntas Kiruki">
+                </div>
+                
+                <div class="product__card" data-category="sacapuntas">
+                    <img src="assets/products/sacapuntas/IMG_6272.png" alt="Sacapuntas Kiruki">
+                </div>
+                
+                <div class="product__card" data-category="sacapuntas">
+                    <img src="assets/products/sacapuntas/IMG_6240.png" alt="Sacapuntas Kiruki">
+                    </div>
+                
+                <div class="product__card" data-category="sacapuntas">
+                    <img src="assets/products/sacapuntas/IMG_6249.png" alt="Sacapuntas Kiruki">
+                    </div>
+                
+                <div class="product__card" data-category="sacapuntas">
+                    <img src="assets/products/sacapuntas/IMG_6256.png" alt="Sacapuntas Kiruki">
+                </div>
+                
+                <div class="product__card" data-category="sacapuntas">
+                    <img src="assets/products/sacapuntas/IMG_6261.png" alt="Sacapuntas Kiruki">
+                    </div>
+                
+                <!-- Cards de Tijeras escolares - Estilo carrusel -->
+                <div class="product__card" data-category="tijeras-escolares">
+                    <img src="assets/products/tijeras escolares/150001-1.png" alt="Tijeras escolares Kiruki 150001">
+                    </div>
+                
+                <div class="product__card" data-category="tijeras-escolares">
+                    <img src="assets/products/tijeras escolares/150001-8.png" alt="Tijeras escolares Kiruki 150001">
+                </div>
+                
+                <div class="product__card" data-category="tijeras-escolares">
+                    <img src="assets/products/tijeras escolares/150002.png" alt="Tijeras escolares Kiruki 150002">
+                    </div>
+                
+                <div class="product__card" data-category="tijeras-escolares">
+                    <img src="assets/products/tijeras escolares/IMG_6232.png" alt="Tijeras escolares Kiruki">
+                    </div>
+                
+                <div class="product__card" data-category="tijeras-escolares">
+                    <img src="assets/products/tijeras escolares/150003-2-6.png" alt="Tijeras escolares Kiruki 150003">
+                </div>
+                
+                <!-- Cards de Tijeras - Estilo carrusel -->
+                <div class="product__card" data-category="tijeras">
+                    <img src="assets/products/tijeras/150005-1.png" alt="Tijeras Kiruki 150005">
+                </div>
+                
+                <!-- Cards de Adhesivo sintético - Estilo carrusel -->
+                <div class="product__card" data-category="adhesivo">
+                    <img src="assets/products/adhesivo sintetico/0U3A7528-fococlipping-HD (1).png" alt="Adhesivo sintético Kiruki">
+                </div>
+                <div class="product__card" data-category="adhesivo">
+                    <img src="assets/products/adhesivo sintetico/0U3A7538-fococlipping-HD (1).png" alt="Adhesivo sintético Kiruki">
+                    </div>
+                <div class="product__card" data-category="adhesivo">
+                    <img src="assets/products/adhesivo sintetico/0U3A7531-fococlipping-HD (1).png" alt="Adhesivo sintético Kiruki">
+                    </div>
+                <div class="product__card" data-category="adhesivo">
+                    <img src="assets/products/adhesivo sintetico/0U3A7537-fococlipping-HD (1).png" alt="Adhesivo sintético Kiruki">
+                </div>
+                
+                <!-- Cards de Bolígrafos - Estilo carrusel -->
+                <div class="product__card" data-category="boligrafos">
+                    <img src="assets/products/boligrafos/Boligrafo Easy Rojo.png" alt="Bolígrafos Kiruki Easy Rojo">
+                </div>
+                <div class="product__card" data-category="boligrafos">
+                    <img src="assets/products/boligrafos/Boligraf Easy Rojo.png" alt="Bolígrafos Kiruki Easy Rojo">
+                </div>
+                <div class="product__card" data-category="boligrafos">
+                    <img src="assets/products/boligrafos/蓝.png" alt="Bolígrafos Kiruki">
+                </div>
+                <div class="product__card" data-category="boligrafos">
+                    <img src="assets/products/boligrafos/Boligrafo Easy Azul.png" alt="Bolígrafos Kiruki Easy Azul">
+                </div>
+                <div class="product__card" data-category="boligrafos">
+                    <img src="assets/products/boligrafos/黑.png" alt="Bolígrafos Kiruki">
+                </div>
+                <div class="product__card" data-category="boligrafos">
+                    <img src="assets/products/boligrafos/Boligrafo Easy Negro.png" alt="Bolígrafos Kiruki Easy Negro">
+                </div>
+                <div class="product__card" data-category="boligrafos">
+                    <img src="assets/products/boligrafos/金属三色.png" alt="Bolígrafos Kiruki">
+                </div>
+                <div class="product__card" data-category="boligrafos">
+                    <img src="assets/products/boligrafos/Boligrafo Smart Negro.png" alt="Bolígrafos Kiruki Smart Negro">
+                </div>
+                <div class="product__card" data-category="boligrafos">
+                    <img src="assets/products/boligrafos/Boligrafo Smart azul.png" alt="Bolígrafos Kiruki Smart Azul">
+                </div>
+                <div class="product__card" data-category="boligrafos">
+                    <img src="assets/products/boligrafos/Boligrafo Vitality.png" alt="Bolígrafos Kiruki Vitality">
+                </div>
+                <div class="product__card" data-category="boligrafos">
+                    <img src="assets/products/boligrafos/花.png" alt="Bolígrafos Kiruki">
+                </div>
+                <div class="product__card" data-category="boligrafos">
+                    <img src="assets/products/boligrafos/Boligrafo Energy.png" alt="Bolígrafos Kiruki Energy">
+                </div>
+                <div class="product__card" data-category="boligrafos">
+                    <img src="assets/products/boligrafos/Boligrafos Energy Azul.png" alt="Bolígrafos Kiruki Smart Azul">
+                </div>
+                <div class="product__card" data-category="boligrafos">
+                    <img src="assets/products/boligrafos/Boligrafos Feel Azul.png" alt="Bolígrafos Kiruki Feel Azul">
+                </div>
+                <div class="product__card" data-category="boligrafos">
+                    <img src="assets/products/boligrafos/Boligrafos Feel azules.png" alt="Bolígrafos Kiruki Feel Azules">
+                </div>
+                
+                <!-- Cards de Microfibras - Estilo carrusel -->
+                <div class="product__card" data-category="microfibras">
+                    <img src="assets/products/microfibras/L1240466.png" alt="Microfibras Kiruki">
+                </div>
+                
+                <div class="product__card" data-category="microfibras">
+                    <img src="assets/products/microfibras/L1240428.png" alt="Microfibras Kiruki">
+                </div>
+                
+                <div class="product__card" data-category="microfibras">
+                    <img src="assets/products/microfibras/L1240462.png" alt="Microfibras Kiruki">
+                </div>
+                
+                <div class="product__card" data-category="microfibras">
+                    <img src="assets/products/microfibras/L1240427.png" alt="Microfibras Kiruki">
+                </div>
+                
+                <div class="product__card" data-category="microfibras">
+                    <img src="assets/products/microfibras/L1240459.png" alt="Microfibras Kiruki">
+                </div>
+                
+                <div class="product__card" data-category="microfibras">
+                    <img src="assets/products/microfibras/L1240429.png" alt="Microfibras Kiruki">
+                </div>
+                
+                <div class="product__card" data-category="microfibras">
+                    <img src="assets/products/microfibras/L1240464.png" alt="Microfibras Kiruki">
+                </div>
+                
+                <div class="product__card" data-category="microfibras">
+                    <img src="assets/products/microfibras/L1240454.png" alt="Microfibras Kiruki">
+                </div>
+                
+                <div class="product__card" data-category="microfibras">
+                    <img src="assets/products/microfibras/L1240431.png" alt="Microfibras Kiruki">
+                </div>
+                
+                <div class="product__card" data-category="microfibras">
+                    <img src="assets/products/microfibras/L1240433.png" alt="Microfibras Kiruki">
+                </div>
+                
+                <div class="product__card" data-category="microfibras">
+                    <img src="assets/products/microfibras/L1240434.png" alt="Microfibras Kiruki">
+                </div>
+                
+                <div class="product__card" data-category="microfibras">
+                    <img src="assets/products/microfibras/L1240435.png" alt="Microfibras Kiruki">
+                </div>
+                
+                <div class="product__card" data-category="microfibras">
+                    <img src="assets/products/microfibras/L1240436.png" alt="Microfibras Kiruki">
+                </div>
+                
+                <div class="product__card" data-category="microfibras">
+                    <img src="assets/products/microfibras/L1240437.png" alt="Microfibras Kiruki">
+                </div>
+                
+                <div class="product__card" data-category="microfibras">
+                    <img src="assets/products/microfibras/L1240438.png" alt="Microfibras Kiruki">
+                </div>
+                
+                <div class="product__card" data-category="microfibras">
+                    <img src="assets/products/microfibras/L1240439.png" alt="Microfibras Kiruki">
+                    </div>
+                
+                <div class="product__card" data-category="microfibras">
+                    <img src="assets/products/microfibras/L1240440.png" alt="Microfibras Kiruki">
+                    </div>
+                
+                <div class="product__card" data-category="microfibras">
+                    <img src="assets/products/microfibras/L1240441.png" alt="Microfibras Kiruki">
+                </div>
+                
+                <div class="product__card" data-category="microfibras">
+                    <img src="assets/products/microfibras/L1240442.png" alt="Microfibras Kiruki">
+                    </div>
+                
+                <div class="product__card" data-category="microfibras">
+                    <img src="assets/products/microfibras/L1240430.png" alt="Microfibras Kiruki">
+                </div>
             </div>
         </div>
     </section>
@@ -314,9 +879,33 @@
             </div>
         </div>
         <div class="footer__bar">
-            Copyright © 2025 Kiruki All rights reserved | Crafted by <a href="https://wa.link/otpwkm" target="_blank" class="link">Ramiro Lacci</a>.
+            Copyright © 2025 <span class="kiruki-logo"><span class="k1">K</span><span class="i1">i</span><span class="r">r</span><span class="u">u</span><span class="k2">k</span><span class="i2">i</span></span> <span class="mih-logo">make it happen</span> All rights reserved | Crafted by <a href="https://wa.link/otpwkm" target="_blank" class="link">Ramiro Lacci</a>.
         </div>
     </footer>
+    
+    <!-- Modal con efecto Parallax -->
+    <div class="modal-parallax" id="modalParallax">
+        <div class="modal-overlay" id="modalOverlay">
+            <div class="modal-content">
+                <button class="modal-close" id="modalClose">&times;</button>
+                <div class="parallax-container">
+                    <div class="parallax-image" id="parallaxImage">
+                        <img src="" alt="Producto Kiruki" id="modalProductImage">
+                    </div>
+                    <div class="parallax-layers">
+                        <div class="parallax-layer layer-1"></div>
+                        <div class="parallax-layer layer-2"></div>
+                        <div class="parallax-layer layer-3"></div>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 id="modalProductTitle">Producto Kiruki</h3>
+                    <p id="modalProductDescription">Descripción del producto</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="main.js"></script>

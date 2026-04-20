@@ -26,6 +26,21 @@ El sitio está diseñado con un enfoque moderno y dinámico, permitiendo a los d
 
 <br/>
 
+## 📸 Vista Previa
+
+<div align="center">
+
+| | |
+|:---:|:---:|
+| ![Hero - Inicio](docs/screenshots/hero.png) | ![Catálogo de Productos](docs/screenshots/products.png) |
+| *Sección Inicio — Hero con logo y descripción* | *Sección Productos — Filtros y galería* |
+| ![Nosotros & Distribuidores](docs/screenshots/about.png) | ![Contacto & Footer](docs/screenshots/contact.png) |
+| *Sección Nosotros y Distribuidores* | *Sección Contacto y Footer* |
+
+</div>
+
+<br/>
+
 ## ✨ Características Principales
 
 - 📱 **Diseño Totalmente Responsivo:** Una experiencia fluida en dispositivos móviles, tablets y escritorio.
@@ -80,6 +95,12 @@ Para visualizar o modificar este proyecto localmente, los pasos son muy simples 
 Kiruki-Make-It-Happen/
 ├── assets/                    # Imágenes, logos y recursos gráficos (organizados por productos)
 ├── catalogo-productos/        # Archivos PDF (Catálogo oficial)
+├── docs/
+│   └── screenshots/           # Capturas de pantalla para el README
+│       ├── hero.png
+│       ├── products.png
+│       ├── about.png
+│       └── contact.png
 ├── index.html                 # Estructura principal y contenido
 ├── style.css                  # Hoja de estilos principal
 ├── main.js                    # Script principal (interacciones, filtros, sliders)

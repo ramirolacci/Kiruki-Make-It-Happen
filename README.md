@@ -89,24 +89,6 @@ Para visualizar o modificar este proyecto localmente, los pasos son muy simples 
 
 <br/>
 
-## 📁 Estructura del Proyecto
-
-```text
-Kiruki-Make-It-Happen/
-├── assets/                    # Imágenes, logos y recursos gráficos (organizados por productos)
-├── catalogo-productos/        # Archivos PDF (Catálogo oficial)
-├── docs/
-│   └── screenshots/           # Capturas de pantalla para el README
-│       ├── hero.png
-│       ├── products.png
-│       ├── about.png
-│       └── contact.png
-├── index.html                 # Estructura principal y contenido
-├── style.css                  # Hoja de estilos principal
-├── main.js                    # Script principal (interacciones, filtros, sliders)
-└── README.md                  # Este documento
-```
-
 ---
 <div align="center">
   <i>Hecho con creatividad y color para la temporada escolar.</i>

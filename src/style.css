@@ -2557,6 +2557,7 @@ header{
     transition: all 0.3s ease;
 }
 
+.filter__btn:hover .filter__count,
 .filter__btn.active .filter__count {
     background: var(--white);
     color: var(--text-dark);

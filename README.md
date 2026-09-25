@@ -1,95 +1,47 @@
-<div align="center">
-  <img src="assets/logo.png" alt="Kiruki Logo" width="250"/>
+# 🎨 Kiruki - Make It Happen
 
-  # Kiruki - Make It Happen 🎨
-  
-  *Desata tu creatividad con Kiruki*
+Sitio web corporativo y catálogo de productos al por mayor de **Kiruki**, desarrollado en **React** con **Vite** y gestor de paquetes **pnpm**.
 
-  [![Status](https://img.shields.io/badge/Status-Active-success.svg)]()
-  [![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)]()
-  [![CSS3](https://img.shields.io/badge/css-%23663399.svg?style=for-the-badge&logo=css&logoColor=white)]()
-  [![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)]()
+## 🚀 Requisitos Previos
 
-  [Explorar la Web](#vision-general) •
-  [Características](#caracteristicas-principales) •
-  [Tecnologías](#tecnologias) •
-  [Catálogo](#catalogo-de-productos)
-</div>
+- [Node.js](https://nodejs.org/) (v18+)
+- [pnpm](https://pnpm.io/) (`npm i -g pnpm`)
 
-<br/>
+## 🛠️ Instalación y Desarrollo
 
-## 🌟 Visión General
+1. **Instalar dependencias:**
+   ```bash
+   pnpm install
+   ```
 
-**Kiruki** es una marca de artículos escolares y de librería diseñada para llevar color, creatividad y rendimiento al día a día. Esta plataforma web funciona como el portal oficial de la marca, presentando una amplia gama de productos, desde herramientas artísticas hasta elementos básicos de escritura y oficina.
+2. **Iniciar servidor local de desarrollo:**
+   ```bash
+   pnpm run dev
+   ```
+   Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
 
-El sitio está diseñado con un enfoque moderno y dinámico, permitiendo a los distribuidores y clientes explorar las categorías de productos, conocer sobre la marca y descargar el catálogo oficial actualizado.
+3. **Compilar para producción:**
+   ```bash
+   pnpm run build
+   ```
 
-<br/>
+4. **Previsualizar la build de producción:**
+   ```bash
+   pnpm run preview
+   ```
 
-## 📸 Vista Previa
+## 📁 Estructura del Proyecto
 
-<div align="center">
-
-| | |
-|:---:|:---:|
-| ![Hero - Inicio](docs/screenshots/hero.png) | ![Catálogo de Productos](docs/screenshots/products.png) |
-| *Sección Inicio — Hero con logo y descripción* | *Sección Productos — Filtros y galería* |
-| ![Nosotros & Distribuidores](docs/screenshots/about.png) | ![Contacto & Footer](docs/screenshots/contact.png) |
-| *Sección Nosotros y Distribuidores* | *Sección Contacto y Footer* |
-
-</div>
-
-<br/>
-
-## ✨ Características Principales
-
-- 📱 **Diseño Totalmente Responsivo:** Una experiencia fluida en dispositivos móviles, tablets y escritorio.
-- 🖼️ **Carruseles Dinámicos:** Integración de Swiper.js para visualizar colecciones de productos y testimonios de distribuidores de forma interactiva.
-- 🔍 **Filtrado Avanzado:** Sistema de filtrado por categorías (crayones, marcadores, acuarelas, etc.) para una navegación rápida y precisa.
-- 🎨 **Estilo Visual Moderno:** Tipografías exclusivas y diseño elegante que refleja la esencia creativa de la marca.
-- 📥 **Descarga de Catálogo:** Acceso directo al catálogo oficial de Kiruki en formato PDF.
-
-<br/>
-
-## 🛠️ Tecnologías
-
-El proyecto ha sido desarrollado utilizando tecnologías web estándar, garantizando un rendimiento óptimo y portabilidad:
-
-- **HTML5:** Estructura semántica.
-- **CSS3 (Vanilla):** Estilos personalizados, animaciones y diseño responsivo usando Flexbox/Grid.
-- **JavaScript (Vanilla):** Lógica de filtrado de productos e interacciones de la interfaz.
-- **Swiper.js:** Para la gestión táctil y fluida de los sliders.
-- **Remix Icon:** Conjunto de iconos minimalistas.
-- **Google Fonts:** Fuentes (Caveat, Satisfy, Shadows Into Light) para un toque artístico.
-
-<br/>
-
-## 📦 Catálogo de Productos
-
-La colección de Kiruki abarca diversas categorías para satisfacer todas las necesidades creativas y académicas:
-
-*   🖍️ **Arte y Color:** Crayones, Pasteles al óleo, Acuarelas, Lápices de colores, Marcadores.
-*   ✏️ **Escritura Regular:** Lápices de grafito, Bolígrafos, Microfibras.
-*   🖋️ **Escritura Especializada:** Rollers gel, Rollers borrables.
-*   ✂️ **Útiles Esenciales:** Gomas de borrar, Sacapuntas, Tijeras (escolares y regulares), Adhesivo sintético.
-
-<br/>
-
-## 🚀 Cómo Empezar (Desarrollo)
-
-Para visualizar o modificar este proyecto localmente, los pasos son muy simples ya que no requiere dependencias pesadas ni procesos de construcción complejos.
-
-1. **Clonar o descargar el repositorio**
-2. **Abrir el proyecto:** 
-   Puedes simplemente abrir el archivo `index.html` en tu navegador de preferencia.
-   
-   *Opcional:* Para una mejor experiencia de desarrollo, utiliza una extensión como **Live Server** en VS Code:
-   *   Haz clic derecho en `index.html`
-   *   Selecciona "Open with Live Server"
-
-<br/>
-
----
-<div align="center">
-  <i>Hecho con creatividad y color para la temporada escolar.</i>
-</div>
+```text
+Kiruki-Make-It-Happen/
+├── public/                # Archivos estáticos (assets, imágenes, catálogo PDF)
+├── src/
+│   ├── components/        # Componentes React (Navbar, Header, Products, Modal 3D, etc.)
+│   ├── data/              # Base de datos de productos y categorías
+│   ├── App.jsx            # Layout principal
+│   ├── main.jsx           # Punto de entrada de React
+│   └── style.css          # Sistema de diseño y estilos visuales Kiruki 2.0
+├── index.html             # HTML principal montado en Vite
+├── package.json           # Dependencias y scripts de pnpm
+└── vite.config.js         # Configuración de Vite
+```

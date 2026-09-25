@@ -35,24 +35,24 @@ export default function ProductModal({ product, onClose }) {
 
     if (imageRef.current) {
       const imageTransform = `
-        translate(${moveX * 120}px, ${moveY * 120}px) 
-        rotateX(${moveY * 45}deg) 
-        rotateY(${moveX * 45}deg) 
-        scale(${1 + Math.abs(moveX + moveY) * 0.3})
+        translate(${moveX * 90}px, ${moveY * 90}px) 
+        rotateX(${moveY * 35}deg) 
+        rotateY(${moveX * 35}deg) 
+        scale(${1 + Math.abs(moveX + moveY) * 0.2})
       `;
-      imageRef.current.style.transform = `perspective(3000px) ${imageTransform}`;
+      imageRef.current.style.transform = `perspective(2500px) ${imageTransform}`;
     }
 
     const layers = [layer1Ref.current, layer2Ref.current, layer3Ref.current];
     layers.forEach((layer, index) => {
       if (!layer) return;
-      const speed = (index + 1) * 2.5;
-      const depth = (index + 1) * 400;
-      const x = moveX * 300 * speed;
-      const y = moveY * 300 * speed;
-      const rotateX = moveY * 60 * speed;
-      const rotateY = moveX * 60 * speed;
-      const scale = 1 + Math.abs(moveX + moveY) * 0.5;
+      const speed = (index + 1) * 2;
+      const depth = (index + 1) * 300;
+      const x = moveX * 220 * speed;
+      const y = moveY * 220 * speed;
+      const rotateX = moveY * 45 * speed;
+      const rotateY = moveX * 45 * speed;
+      const scale = 1 + Math.abs(moveX + moveY) * 0.4;
 
       layer.style.transform = `
         translate3d(${x}px, ${y}px, ${depth}px) 
@@ -69,7 +69,7 @@ export default function ProductModal({ product, onClose }) {
 
   const resetTransforms = () => {
     if (imageRef.current) {
-      imageRef.current.style.transform = 'perspective(3000px)';
+      imageRef.current.style.transform = 'perspective(2500px)';
     }
     [layer1Ref.current, layer2Ref.current, layer3Ref.current].forEach(layer => {
       if (layer) {
@@ -89,6 +89,9 @@ export default function ProductModal({ product, onClose }) {
 
   if (!product) return null;
 
+  const whatsappMessage = encodeURIComponent(`¡Hola! Quisiera consultar precios y disponibilidad al por mayor del producto: ${product.title}`);
+  const whatsappUrl = `https://wa.me/5491136286592?text=${whatsappMessage}`;
+
   return (
     <div className="modal-parallax active" id="modalParallax">
       <div
@@ -107,8 +110,9 @@ export default function ProductModal({ product, onClose }) {
             onClick={onClose}
             onMouseEnter={pauseParallax}
             onMouseLeave={resumeParallax}
+            aria-label="Cerrar modal"
           >
-            &times;
+            <i className="ri-close-line"></i>
           </button>
           <div className="parallax-container">
             <div className="parallax-image" id="parallaxImage" ref={imageRef}>
@@ -121,6 +125,9 @@ export default function ProductModal({ product, onClose }) {
             </div>
           </div>
           <div className="product-info">
+            {product.categoryLabel && (
+              <span className="modal-category-badge">{product.categoryLabel}</span>
+            )}
             <h3
               id="modalProductTitle"
               onMouseEnter={pauseParallax}
@@ -133,8 +140,21 @@ export default function ProductModal({ product, onClose }) {
               onMouseEnter={pauseParallax}
               onMouseLeave={resumeParallax}
             >
-              {`Descubre la calidad y creatividad de ${product.title}. Producto Kiruki diseñado para inspirar tu imaginación.`}
+              Descubre la calidad profesional y elegancia de <strong>{product.title}</strong>. Formulado por Kiruki para garantizar máximo rendimiento, colores vivos y durabilidad extrema en cada uso.
             </p>
+            <div className="modal-actions">
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-whatsapp-modal"
+                onMouseEnter={pauseParallax}
+                onMouseLeave={resumeParallax}
+              >
+                <span><i className="ri-whatsapp-line"></i></span>
+                Consultar por WhatsApp
+              </a>
+            </div>
           </div>
         </div>
       </div>

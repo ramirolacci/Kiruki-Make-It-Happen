@@ -51,7 +51,7 @@ export default function Navbar() {
           >
             <button className="btn btn-catalog-download">
               <span><i className="ri-download-fill"></i></span>
-              Catálogo PDF
+              Catálogo
             </button>
           </a>
         </li>

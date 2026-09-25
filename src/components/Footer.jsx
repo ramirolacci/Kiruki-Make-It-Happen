@@ -29,7 +29,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="footer__bar">
-        Copyright © 2025 <span className="kiruki-logo"><span className="k1">K</span><span className="i1">i</span><span className="r">r</span><span className="u">u</span><span className="k2">k</span><span className="i2">i</span></span> <span className="mih-logo">make it happen</span> All rights reserved | Crafted by <a href="https://wa.link/otpwkm" target="_blank" rel="noopener noreferrer" className="link">Ramiro Lacci</a>.
+        Copyright © 2025 <span className="kiruki-logo"><span className="k1">K</span><span className="i1">i</span><span className="r">r</span><span className="u">u</span><span className="k2">k</span><span className="i2">i</span></span> <span className="mih-logo">make it happen</span> All rights reserved | Crafted by <a href="https://waveframe.com.ar/" target="_blank" rel="noopener noreferrer" className="link">WaveFrame Studio</a>.
       </div>
     </footer>
   );

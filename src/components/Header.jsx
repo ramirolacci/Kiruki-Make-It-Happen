@@ -1,15 +1,39 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
 
 export default function Header() {
+  const headerRef = useRef(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        ['.header__content h1', '.header__content .section__description', '.hero-actions a', '.hero-features-strip .feature-item'],
+        { y: 30, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          stagger: 0.1,
+          duration: 0.8,
+          ease: 'power3.out',
+          clearProps: 'transform,opacity'
+        }
+      );
+      gsap.fromTo(
+        '.header__image img',
+        { scale: 0.9, opacity: 0 },
+        { scale: 1, opacity: 1, duration: 1, ease: 'power2.out', clearProps: 'transform,opacity' }
+      );
+    }, headerRef);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <header className="hero-modern" id="inicio">
+    <header className="hero-modern" id="inicio" ref={headerRef}>
       <div className="header__image">
         <img src="/assets/logo.png" alt="Kiruki Header" />
       </div>
       <div className="header__content">
-        <div className="hero-badge">
-          <span className="badge-dot"></span> Venta Mayorista Directa • Temporada 2025
-        </div>
         <h1>Desatá tu creatividad con <span className="gradient-text">Kiruki</span></h1>
         <p className="section__description">
           Encuentra todo lo que necesitas para un año lleno de color, arte y diversión. 

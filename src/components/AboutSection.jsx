@@ -1,8 +1,47 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function AboutSection() {
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      // Image entrance parallax
+      gsap.from('.about__image img', {
+        scrollTrigger: {
+          trigger: '.about__image',
+          start: 'top 80%',
+          toggleActions: 'play none none reverse',
+        },
+        x: -60,
+        opacity: 0,
+        duration: 1.2,
+        ease: 'power3.out',
+      });
+
+      // Content staggered entrance
+      gsap.from('.about__content > *', {
+        scrollTrigger: {
+          trigger: '.about__content',
+          start: 'top 80%',
+          toggleActions: 'play none none reverse',
+        },
+        y: 40,
+        opacity: 0,
+        stagger: 0.2,
+        duration: 0.9,
+        ease: 'power3.out',
+      });
+    }, sectionRef);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <section className="section__container about__container" id="nosotros">
+    <section className="section__container about__container" id="nosotros" ref={sectionRef}>
       <div className="about__image">
         <img src="/assets/about.jpg" alt="about" />
       </div>

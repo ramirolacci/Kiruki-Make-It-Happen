@@ -1,11 +1,16 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect, useRef } from 'react';
 import { CATEGORIES, CAROUSEL_WRAPPER_1, CAROUSEL_WRAPPER_2, PRODUCTS_BY_CATEGORY } from '../data/productsData';
 import ProductModal from './ProductModal';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function ProductsSection() {
   const [activeCategory, setActiveCategory] = useState('todos');
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedProduct, setSelectedProduct] = useState(null);
+  const sectionRef = useRef(null);
 
   // Calculate product counts per category
   const categoryCounts = useMemo(() => {
@@ -36,7 +41,81 @@ export default function ProductsSection() {
     setActiveCategory(catId);
   };
 
-  // Repeated items for smooth infinite marquee carousel when "todos" is active and no search query
+  // GSAP Initial ScrollTrigger entrance
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        '.product__header-content > *',
+        { y: 30, opacity: 0 },
+        {
+          scrollTrigger: {
+            trigger: '.product__header-content',
+            start: 'top 90%',
+          },
+          y: 0,
+          opacity: 1,
+          stagger: 0.1,
+          duration: 0.7,
+          ease: 'power3.out',
+          clearProps: 'transform,opacity'
+        }
+      );
+
+      gsap.fromTo(
+        '.product__search-bar',
+        { y: 20, opacity: 0 },
+        {
+          scrollTrigger: {
+            trigger: '.product__search-bar',
+            start: 'top 90%',
+          },
+          y: 0,
+          opacity: 1,
+          duration: 0.7,
+          ease: 'power3.out',
+          clearProps: 'transform,opacity'
+        }
+      );
+
+      gsap.fromTo(
+        '.product__filters .filter__btn',
+        { y: 20, opacity: 0 },
+        {
+          scrollTrigger: {
+            trigger: '.product__filters',
+            start: 'top 90%',
+          },
+          y: 0,
+          opacity: 1,
+          stagger: 0.02,
+          duration: 0.5,
+          ease: 'power2.out',
+          clearProps: 'transform,opacity'
+        }
+      );
+    }, sectionRef);
+
+    setTimeout(() => {
+      ScrollTrigger.refresh();
+    }, 100);
+
+    return () => ctx.revert();
+  }, []);
+
+  // GSAP Stagger animation when filtering cards
+  useEffect(() => {
+    if (activeCategory !== 'todos' || searchQuery.trim() !== '') {
+      const ctx = gsap.context(() => {
+        gsap.fromTo(
+          '.product__card',
+          { y: 20, opacity: 0 },
+          { y: 0, opacity: 1, stagger: 0.03, duration: 0.4, ease: 'power2.out', clearProps: 'transform,opacity' }
+        );
+      }, sectionRef);
+      return () => ctx.revert();
+    }
+  }, [activeCategory, searchQuery]);
+
   const isDefaultView = activeCategory === 'todos' && searchQuery.trim() === '';
   const repeatedCarousel1 = [...CAROUSEL_WRAPPER_1, ...CAROUSEL_WRAPPER_1, ...CAROUSEL_WRAPPER_1, ...CAROUSEL_WRAPPER_1];
   const repeatedCarousel2 = [...CAROUSEL_WRAPPER_2, ...CAROUSEL_WRAPPER_2, ...CAROUSEL_WRAPPER_2, ...CAROUSEL_WRAPPER_2];
@@ -47,7 +126,7 @@ export default function ProductsSection() {
   };
 
   return (
-    <section className="product__container" id="productos">
+    <section className="product__container" id="productos" ref={sectionRef}>
       <div className="product__header-content">
         <h3 className="section__subheader">Catálogo 2025</h3>
         <h2 className="section__header">Nuestros productos</h2>

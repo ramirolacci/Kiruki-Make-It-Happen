@@ -1,7 +1,58 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function ContactSection() {
   const [copied, setCopied] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      // Header animation
+      gsap.fromTo(
+        '.banner__header > *',
+        { y: 30, opacity: 0 },
+        {
+          scrollTrigger: {
+            trigger: '.banner__header',
+            start: 'top 90%',
+          },
+          y: 0,
+          opacity: 1,
+          stagger: 0.15,
+          duration: 0.8,
+          ease: 'power3.out',
+          clearProps: 'transform,opacity'
+        }
+      );
+
+      // Feature cards staggered reveal
+      gsap.fromTo(
+        '.feature__card',
+        { y: 30, opacity: 0 },
+        {
+          scrollTrigger: {
+            trigger: '.feature__grid',
+            start: 'top 90%',
+          },
+          y: 0,
+          opacity: 1,
+          stagger: 0.15,
+          duration: 0.8,
+          ease: 'power3.out',
+          clearProps: 'transform,opacity'
+        }
+      );
+    }, sectionRef);
+
+    setTimeout(() => {
+      ScrollTrigger.refresh();
+    }, 100);
+
+    return () => ctx.revert();
+  }, []);
 
   const handleCopyEmail = (e) => {
     e.preventDefault();
@@ -11,7 +62,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section className="section__container banner__container" id="contacto">
+    <section className="section__container banner__container" id="contacto" ref={sectionRef}>
       <div className="banner__header">
         <h3 className="section__subheader">¿Hablamos?</h3>
         <h2 className="section__header">Contáctanos</h2>

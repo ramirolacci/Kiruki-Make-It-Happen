@@ -1,13 +1,34 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { gsap } from 'gsap';
 
 export default function ProductModal({ product, onClose }) {
   const [isParallaxActive, setIsParallaxActive] = useState(true);
+  const modalRef = useRef(null);
   const imageRef = useRef(null);
   const layer1Ref = useRef(null);
   const layer2Ref = useRef(null);
   const layer3Ref = useRef(null);
 
+  // GSAP Entrance & Exit animations
   useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        '.modal-content',
+        { scale: 0.8, opacity: 0, y: 30 },
+        { scale: 1, opacity: 1, y: 0, duration: 0.5, ease: 'back.out(1.3)' }
+      );
+      gsap.fromTo(
+        '.modal-overlay',
+        { opacity: 0 },
+        { opacity: 1, duration: 0.3, ease: 'power2.out' }
+      );
+      gsap.fromTo(
+        '.product-info > *',
+        { y: 20, opacity: 0 },
+        { y: 0, opacity: 1, stagger: 0.1, duration: 0.6, delay: 0.2, ease: 'power3.out' }
+      );
+    }, modalRef);
+
     const handleKeyDown = (e) => {
       if (e.key === 'Escape') {
         onClose();
@@ -19,6 +40,7 @@ export default function ProductModal({ product, onClose }) {
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
       document.body.style.overflow = 'auto';
+      ctx.revert();
     };
   }, [onClose]);
 
@@ -93,7 +115,7 @@ export default function ProductModal({ product, onClose }) {
   const whatsappUrl = `https://wa.me/5491136286592?text=${whatsappMessage}`;
 
   return (
-    <div className="modal-parallax active" id="modalParallax">
+    <div className="modal-parallax active" id="modalParallax" ref={modalRef}>
       <div
         className="modal-overlay"
         id="modalOverlay"

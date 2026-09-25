@@ -1,0 +1,238 @@
+export const CATEGORIES = [
+  { id: 'todos', label: 'Todos' },
+  { id: 'crayones', label: 'Crayones' },
+  { id: 'pasteles', label: 'Pasteles al óleo' },
+  { id: 'acuarelas', label: 'Acuarelas' },
+  { id: 'lapices-colores', label: 'Lápices de colores' },
+  { id: 'lapices-grafito', label: 'Lápices de grafito' },
+  { id: 'marcadores', label: 'Marcadores' },
+  { id: 'rollers-gel', label: 'Rollers gel' },
+  { id: 'rollers-borrables', label: 'Rollers borrables' },
+  { id: 'gomas', label: 'Gomas' },
+  { id: 'sacapuntas', label: 'Sacapuntas' },
+  { id: 'tijeras-escolares', label: 'Tijeras escolares' },
+  { id: 'tijeras', label: 'Tijeras' },
+  { id: 'adhesivo', label: 'Adhesivo sintético' },
+  { id: 'boligrafos', label: 'Bolígrafos' },
+  { id: 'microfibras', label: 'Microfibras' },
+];
+
+export const CAROUSEL_WRAPPER_1 = [
+  { id: 'c1', src: '/assets/product1.png', alt: 'Producto Kiruki 1' },
+  { id: 'c2', src: '/assets/product2.png', alt: 'Producto Kiruki 2' },
+  { id: 'c3', src: '/assets/product3.png', alt: 'Producto Kiruki 3' },
+  { id: 'c4', src: '/assets/product4.png', alt: 'Producto Kiruki 4' },
+  { id: 'c5', src: '/assets/product5.png', alt: 'Producto Kiruki 5' },
+];
+
+export const CAROUSEL_WRAPPER_2 = [
+  { id: 'c6', src: '/assets/product6.png', alt: 'Producto Kiruki 6' },
+  { id: 'c7', src: '/assets/product7.png', alt: 'Producto Kiruki 7' },
+  { id: 'c8', src: '/assets/product8.png', alt: 'Producto Kiruki 8' },
+  { id: 'c9', src: '/assets/product9.png', alt: 'Producto Kiruki 9' },
+  { id: 'c10', src: '/assets/product10.png', alt: 'Producto Kiruki 10' },
+  { id: 'c11', src: '/assets/product11.png', alt: 'Producto Kiruki 11' },
+  { id: 'c12', src: '/assets/product12.png', alt: 'Producto Kiruki 12' },
+];
+
+export const PRODUCTS_BY_CATEGORY = [
+  // Crayones
+  { id: 'cr1', category: 'crayones', src: '/assets/products/crayones/800001-Crayon.png', title: 'Crayones Kiruki 800001' },
+  { id: 'cr2', category: 'crayones', src: '/assets/products/crayones/800001.png', title: 'Crayones Kiruki 800001' },
+  { id: 'cr3', category: 'crayones', src: '/assets/products/crayones/800002-Crayon.png', title: 'Crayones Kiruki 800002' },
+  { id: 'cr4', category: 'crayones', src: '/assets/products/crayones/800002-2.png', title: 'Crayones Kiruki 800002' },
+  { id: 'cr5', category: 'crayones', src: '/assets/products/crayones/800003-Crayon.png', title: 'Crayones Kiruki 800003' },
+  { id: 'cr6', category: 'crayones', src: '/assets/products/crayones/800003-1.png', title: 'Crayones Kiruki 800003' },
+  { id: 'cr7', category: 'crayones', src: '/assets/products/crayones/800004-Crayon.png', title: 'Crayones Kiruki 800004' },
+  { id: 'cr8', category: 'crayones', src: '/assets/products/crayones/800004-1.png', title: 'Crayones Kiruki 800004' },
+  { id: 'cr9', category: 'crayones', src: '/assets/products/crayones/800005-Crayon 01.png', title: 'Crayones Kiruki 800005' },
+  { id: 'cr10', category: 'crayones', src: '/assets/products/crayones/800005-1.png', title: 'Crayones Kiruki 800005' },
+  { id: 'cr11', category: 'crayones', src: '/assets/products/crayones/800007- Crayon 01.png', title: 'Crayones Kiruki 800007' },
+  { id: 'cr12', category: 'crayones', src: '/assets/products/crayones/800007.png', title: 'Crayones Kiruki 800007' },
+
+  // Pasteles
+  { id: 'p1', category: 'pasteles', src: '/assets/products/pasteles al oleo/800006-Pastel.png', title: 'Pasteles al óleo Kiruki 800006' },
+  { id: 'p2', category: 'pasteles', src: '/assets/products/pasteles al oleo/800006-1.png', title: 'Pasteles al óleo Kiruki 800006' },
+
+  // Acuarelas
+  { id: 'ac1', category: 'acuarelas', src: '/assets/products/acuarelas/900001-1.png', title: 'Acuarelas Kiruki 900001' },
+  { id: 'ac2', category: 'acuarelas', src: '/assets/products/acuarelas/DSC_0006.png', title: 'Acuarelas Kiruki' },
+  { id: 'ac3', category: 'acuarelas', src: '/assets/products/acuarelas/900002-1.png', title: 'Acuarelas Kiruki 900002' },
+  { id: 'ac4', category: 'acuarelas', src: '/assets/products/acuarelas/900002-3.png', title: 'Acuarelas Kiruki 900002' },
+  { id: 'ac5', category: 'acuarelas', src: '/assets/products/acuarelas/900003.png', title: 'Acuarelas Kiruki 900003' },
+  { id: 'ac6', category: 'acuarelas', src: '/assets/products/acuarelas/900003-1.png', title: 'Acuarelas Kiruki 900003' },
+
+  // Lápices de colores
+  { id: 'lc1', category: 'lapices-colores', src: '/assets/products/lapices de colores/600007.png', title: 'Lápices de colores Kiruki 600007' },
+  { id: 'lc2', category: 'lapices-colores', src: '/assets/products/lapices de colores/IMG_4996.png', title: 'Lápices de colores Kiruki' },
+  { id: 'lc3', category: 'lapices-colores', src: '/assets/products/lapices de colores/IMG_5000.png', title: 'Lápices de colores Kiruki' },
+  { id: 'lc4', category: 'lapices-colores', src: '/assets/products/lapices de colores/IMG_5002.png', title: 'Lápices de colores Kiruki' },
+  { id: 'lc5', category: 'lapices-colores', src: '/assets/products/lapices de colores/IMG_6283(1).png', title: 'Lápices de colores Kiruki' },
+  { id: 'lc6', category: 'lapices-colores', src: '/assets/products/lapices de colores/IMG_6286(1).png', title: 'Lápices de colores Kiruki' },
+  { id: 'lc7', category: 'lapices-colores', src: '/assets/products/lapices de colores/IMG_6290(1).png', title: 'Lápices de colores Kiruki' },
+  { id: 'lc8', category: 'lapices-colores', src: '/assets/products/lapices de colores/IMG_6301(1).png', title: 'Lápices de colores Kiruki' },
+
+  // Lápices de grafito
+  { id: 'lg1', category: 'lapices-grafito', src: '/assets/products/lapices de grafito/Grafitos Pastel.png', title: 'Lápices de grafito Kiruki Grafitos Pastel' },
+  { id: 'lg2', category: 'lapices-grafito', src: '/assets/products/lapices de grafito/Grafitos Pastel x 36.png', title: 'Lápices de grafito Kiruki Grafitos Pastel x 36' },
+  { id: 'lg3', category: 'lapices-grafito', src: '/assets/products/lapices de grafito/IMG_5043.png', title: 'Lápices de grafito Kiruki' },
+  { id: 'lg4', category: 'lapices-grafito', src: '/assets/products/lapices de grafito/Grafito Neon x 36.png', title: 'Lápices de grafito Kiruki Grafito Neon x 36' },
+  { id: 'lg5', category: 'lapices-grafito', src: '/assets/products/lapices de grafito/Grafito Metallic x 36.png', title: 'Lápices de grafito Kiruki Grafito Metallic x 36' },
+  { id: 'lg6', category: 'lapices-grafito', src: '/assets/products/lapices de grafito/Grafito Metallic x 36 2.png', title: 'Lápices de grafito Kiruki Grafito Metallic x 36' },
+
+  // Marcadores
+  { id: 'm1', category: 'marcadores', src: '/assets/products/marcadores/0U3A7716-fococlipping-HD.png', title: 'Marcadores Kiruki' },
+  { id: 'm2', category: 'marcadores', src: '/assets/products/marcadores/0U3A7720-fococlipping-HD.png', title: 'Marcadores Kiruki' },
+  { id: 'm3', category: 'marcadores', src: '/assets/products/marcadores/0U3A7721-fococlipping-HD.png', title: 'Marcadores Kiruki' },
+  { id: 'm4', category: 'marcadores', src: '/assets/products/marcadores/0U3A7723-fococlipping-HD.png', title: 'Marcadores Kiruki' },
+  { id: 'm5', category: 'marcadores', src: '/assets/products/marcadores/0U3A7724-fococlipping-HD.png', title: 'Marcadores Kiruki' },
+  { id: 'm6', category: 'marcadores', src: '/assets/products/marcadores/0U3A7726-fococlipping-HD.png', title: 'Marcadores Kiruki' },
+  { id: 'm7', category: 'marcadores', src: '/assets/products/marcadores/0U3A7727-fococlipping-HD.png', title: 'Marcadores Kiruki' },
+  { id: 'm8', category: 'marcadores', src: '/assets/products/marcadores/0U3A7730-fococlipping-HD.png', title: 'Marcadores Kiruki' },
+  { id: 'm9', category: 'marcadores', src: '/assets/products/marcadores/1.4.png', title: 'Marcadores Kiruki' },
+  { id: 'm10', category: 'marcadores', src: '/assets/products/marcadores/L1240445.png', title: 'Marcadores Kiruki' },
+  { id: 'm11', category: 'marcadores', src: '/assets/products/marcadores/L1240425.png', title: 'Marcadores Kiruki' },
+  { id: 'm12', category: 'marcadores', src: '/assets/products/marcadores/L1240449.png', title: 'Marcadores Kiruki' },
+  { id: 'm13', category: 'marcadores', src: '/assets/products/marcadores/0U3A7712-fococlipping-HD - copia.png', title: 'Marcadores Kiruki' },
+  { id: 'm14', category: 'marcadores', src: '/assets/products/marcadores/0U3A7715-fococlipping-HD.png', title: 'Marcadores Kiruki' },
+
+  // Rollers gel
+  { id: 'rg1', category: 'rollers-gel', src: '/assets/products/rollers gel/0U3A7539-fococlipping-HD - copia (1).png', title: 'Rollers gel Kiruki' },
+  { id: 'rg2', category: 'rollers-gel', src: '/assets/products/rollers gel/0U3A7541-fococlipping-HD (1).png', title: 'Rollers gel Kiruki' },
+  { id: 'rg3', category: 'rollers-gel', src: '/assets/products/rollers gel/0U3A7542-fococlipping-HD (1).png', title: 'Rollers gel Kiruki' },
+  { id: 'rg4', category: 'rollers-gel', src: '/assets/products/rollers gel/0U3A7544-fococlipping-HD (1).png', title: 'Rollers gel Kiruki' },
+
+  // Rollers borrables
+  { id: 'rb1', category: 'rollers-borrables', src: '/assets/products/rollers borrables/120001.png', title: 'Rollers borrables Kiruki 120001' },
+  { id: 'rb2', category: 'rollers-borrables', src: '/assets/products/rollers borrables/120001_b.png', title: 'Rollers borrables Kiruki 120001' },
+  { id: 'rb3', category: 'rollers-borrables', src: '/assets/products/rollers borrables/120002.png', title: 'Rollers borrables Kiruki 120002' },
+  { id: 'rb4', category: 'rollers-borrables', src: '/assets/products/rollers borrables/120002_b.png', title: 'Rollers borrables Kiruki 120002' },
+  { id: 'rb5', category: 'rollers-borrables', src: '/assets/products/rollers borrables/120003.png', title: 'Rollers borrables Kiruki 120003' },
+  { id: 'rb6', category: 'rollers-borrables', src: '/assets/products/rollers borrables/120003_b.png', title: 'Rollers borrables Kiruki 120003' },
+  { id: 'rb7', category: 'rollers-borrables', src: '/assets/products/rollers borrables/CUTE CYAN.png', title: 'Rollers borrables Kiruki CUTE CYAN' },
+  { id: 'rb8', category: 'rollers-borrables', src: '/assets/products/rollers borrables/CUTE-MANZANA.png', title: 'Rollers borrables Kiruki CUTE MANZANA' },
+  { id: 'rb9', category: 'rollers-borrables', src: '/assets/products/rollers borrables/CUTE-ROSA.png', title: 'Rollers borrables Kiruki CUTE ROSA' },
+  { id: 'rb10', category: 'rollers-borrables', src: '/assets/products/rollers borrables/X-TRAS AZUL.png', title: 'Rollers borrables Kiruki X-TRAS AZUL' },
+  { id: 'rb11', category: 'rollers-borrables', src: '/assets/products/rollers borrables/X-TRAS-CELESTE.png', title: 'Rollers borrables Kiruki X-TRAS CELESTE' },
+
+  // Gomas
+  { id: 'g1', category: 'gomas', src: '/assets/products/gomas de borrar/170005-.png', title: 'Gomas de borrar Kiruki 170005' },
+  { id: 'g2', category: 'gomas', src: '/assets/products/gomas de borrar/Goma Techink x 1.png', title: 'Gomas de borrar Kiruki Goma Techink x 1' },
+  { id: 'g3', category: 'gomas', src: '/assets/products/gomas de borrar/Goma Techink x 36.png', title: 'Gomas de borrar Kiruki Goma Techink x 36' },
+  { id: 'g4', category: 'gomas', src: '/assets/products/gomas de borrar/IMG_5024.png', title: 'Gomas de borrar Kiruki' },
+  { id: 'g5', category: 'gomas', src: '/assets/products/gomas de borrar/IMG_5079.png', title: 'Gomas de borrar Kiruki' },
+  { id: 'g6', category: 'gomas', src: '/assets/products/gomas de borrar/IMG_5281.png', title: 'Gomas de borrar Kiruki' },
+  { id: 'g7', category: 'gomas', src: '/assets/products/gomas de borrar/IMG_5284.png', title: 'Gomas de borrar Kiruki' },
+  { id: 'g8', category: 'gomas', src: '/assets/products/gomas de borrar/IMG_5424.png', title: 'Gomas de borrar Kiruki' },
+  { id: 'g9', category: 'gomas', src: '/assets/products/gomas de borrar/IMG_5364.png', title: 'Gomas de borrar Kiruki' },
+  { id: 'g10', category: 'gomas', src: '/assets/products/gomas de borrar/IMG_5367.png', title: 'Gomas de borrar Kiruki' },
+  { id: 'g11', category: 'gomas', src: '/assets/products/gomas de borrar/IMG_5378.png', title: 'Gomas de borrar Kiruki' },
+  { id: 'g12', category: 'gomas', src: '/assets/products/gomas de borrar/IMG_5380.png', title: 'Gomas de borrar Kiruki' },
+  { id: 'g13', category: 'gomas', src: '/assets/products/gomas de borrar/IMG_5357.png', title: 'Gomas de borrar Kiruki' },
+  { id: 'g14', category: 'gomas', src: '/assets/products/gomas de borrar/IMG_5390.png', title: 'Gomas de borrar Kiruki' },
+  { id: 'g15', category: 'gomas', src: '/assets/products/gomas de borrar/IMG_5394.png', title: 'Gomas de borrar Kiruki' },
+  { id: 'g16', category: 'gomas', src: '/assets/products/gomas de borrar/IMG_5396.png', title: 'Gomas de borrar Kiruki' },
+  { id: 'g17', category: 'gomas', src: '/assets/products/gomas de borrar/IMG_5400.png', title: 'Gomas de borrar Kiruki' },
+  { id: 'g18', category: 'gomas', src: '/assets/products/gomas de borrar/IMG_5403.png', title: 'Gomas de borrar Kiruki' },
+
+  // Sacapuntas
+  { id: 's1', category: 'sacapuntas', src: '/assets/products/sacapuntas/160001-1.png', title: 'Sacapuntas Kiruki 160001' },
+  { id: 's2', category: 'sacapuntas', src: '/assets/products/sacapuntas/160001-8.png', title: 'Sacapuntas Kiruki 160001' },
+  { id: 's3', category: 'sacapuntas', src: '/assets/products/sacapuntas/160005-1.png', title: 'Sacapuntas Kiruki 160005' },
+  { id: 's4', category: 'sacapuntas', src: '/assets/products/sacapuntas/160005-3.png', title: 'Sacapuntas Kiruki 160005' },
+  { id: 's5', category: 'sacapuntas', src: '/assets/products/sacapuntas/IMG_5072.png', title: 'Sacapuntas Kiruki' },
+  { id: 's6', category: 'sacapuntas', src: '/assets/products/sacapuntas/IMG_5219.png', title: 'Sacapuntas Kiruki' },
+  { id: 's7', category: 'sacapuntas', src: '/assets/products/sacapuntas/IMG_5359.png', title: 'Sacapuntas Kiruki' },
+  { id: 's8', category: 'sacapuntas', src: '/assets/products/sacapuntas/IMG_5372.png', title: 'Sacapuntas Kiruki' },
+  { id: 's9', category: 'sacapuntas', src: '/assets/products/sacapuntas/IMG_6272.png', title: 'Sacapuntas Kiruki' },
+  { id: 's10', category: 'sacapuntas', src: '/assets/products/sacapuntas/IMG_6240.png', title: 'Sacapuntas Kiruki' },
+  { id: 's11', category: 'sacapuntas', src: '/assets/products/sacapuntas/IMG_6249.png', title: 'Sacapuntas Kiruki' },
+  { id: 's12', category: 'sacapuntas', src: '/assets/products/sacapuntas/IMG_6256.png', title: 'Sacapuntas Kiruki' },
+  { id: 's13', category: 'sacapuntas', src: '/assets/products/sacapuntas/IMG_6261.png', title: 'Sacapuntas Kiruki' },
+
+  // Tijeras escolares
+  { id: 'te1', category: 'tijeras-escolares', src: '/assets/products/tijeras escolares/150001-1.png', title: 'Tijeras escolares Kiruki 150001' },
+  { id: 'te2', category: 'tijeras-escolares', src: '/assets/products/tijeras escolares/150001-8.png', title: 'Tijeras escolares Kiruki 150001' },
+  { id: 'te3', category: 'tijeras-escolares', src: '/assets/products/tijeras escolares/150002.png', title: 'Tijeras escolares Kiruki 150002' },
+  { id: 'te4', category: 'tijeras-escolares', src: '/assets/products/tijeras escolares/IMG_6232.png', title: 'Tijeras escolares Kiruki' },
+  { id: 'te5', category: 'tijeras-escolares', src: '/assets/products/tijeras escolares/150003-2-6.png', title: 'Tijeras escolares Kiruki 150003' },
+
+  // Tijeras
+  { id: 't1', category: 'tijeras', src: '/assets/products/tijeras/150005-1.png', title: 'Tijeras Kiruki 150005' },
+
+  // Adhesivo
+  { id: 'ad1', category: 'adhesivo', src: '/assets/products/adhesivo sintetico/0U3A7528-fococlipping-HD (1).png', title: 'Adhesivo sintético Kiruki' },
+  { id: 'ad2', category: 'adhesivo', src: '/assets/products/adhesivo sintetico/0U3A7538-fococlipping-HD (1).png', title: 'Adhesivo sintético Kiruki' },
+  { id: 'ad3', category: 'adhesivo', src: '/assets/products/adhesivo sintetico/0U3A7531-fococlipping-HD (1).png', title: 'Adhesivo sintético Kiruki' },
+  { id: 'ad4', category: 'adhesivo', src: '/assets/products/adhesivo sintetico/0U3A7537-fococlipping-HD (1).png', title: 'Adhesivo sintético Kiruki' },
+
+  // Bolígrafos
+  { id: 'b1', category: 'boligrafos', src: '/assets/products/boligrafos/Boligrafo Easy Rojo.png', title: 'Bolígrafos Kiruki Easy Rojo' },
+  { id: 'b2', category: 'boligrafos', src: '/assets/products/boligrafos/Boligraf Easy Rojo.png', title: 'Bolígrafos Kiruki Easy Rojo' },
+  { id: 'b3', category: 'boligrafos', src: '/assets/products/boligrafos/蓝.png', title: 'Bolígrafos Kiruki' },
+  { id: 'b4', category: 'boligrafos', src: '/assets/products/boligrafos/Boligrafo Easy Azul.png', title: 'Bolígrafos Kiruki Easy Azul' },
+  { id: 'b5', category: 'boligrafos', src: '/assets/products/boligrafos/黑.png', title: 'Bolígrafos Kiruki' },
+  { id: 'b6', category: 'boligrafos', src: '/assets/products/boligrafos/Boligrafo Easy Negro.png', title: 'Bolígrafos Kiruki Easy Negro' },
+  { id: 'b7', category: 'boligrafos', src: '/assets/products/boligrafos/金属三色.png', title: 'Bolígrafos Kiruki' },
+  { id: 'b8', category: 'boligrafos', src: '/assets/products/boligrafos/Boligrafo Smart Negro.png', title: 'Bolígrafos Kiruki Smart Negro' },
+  { id: 'b9', category: 'boligrafos', src: '/assets/products/boligrafos/Boligrafo Smart azul.png', title: 'Bolígrafos Kiruki Smart Azul' },
+  { id: 'b10', category: 'boligrafos', src: '/assets/products/boligrafos/Boligrafo Vitality.png', title: 'Bolígrafos Kiruki Vitality' },
+  { id: 'b11', category: 'boligrafos', src: '/assets/products/boligrafos/花.png', title: 'Bolígrafos Kiruki' },
+  { id: 'b12', category: 'boligrafos', src: '/assets/products/boligrafos/Boligrafo Energy.png', title: 'Bolígrafos Kiruki Energy' },
+  { id: 'b13', category: 'boligrafos', src: '/assets/products/boligrafos/Boligrafos Energy Azul.png', title: 'Bolígrafos Kiruki Smart Azul' },
+  { id: 'b14', category: 'boligrafos', src: '/assets/products/boligrafos/Boligrafos Feel Azul.png', title: 'Bolígrafos Kiruki Feel Azul' },
+  { id: 'b15', category: 'boligrafos', src: '/assets/products/boligrafos/Boligrafos Feel azules.png', title: 'Bolígrafos Kiruki Feel Azules' },
+
+  // Microfibras
+  { id: 'mf1', category: 'microfibras', src: '/assets/products/microfibras/L1240466.png', title: 'Microfibras Kiruki' },
+  { id: 'mf2', category: 'microfibras', src: '/assets/products/microfibras/L1240428.png', title: 'Microfibras Kiruki' },
+  { id: 'mf3', category: 'microfibras', src: '/assets/products/microfibras/L1240462.png', title: 'Microfibras Kiruki' },
+  { id: 'mf4', category: 'microfibras', src: '/assets/products/microfibras/L1240427.png', title: 'Microfibras Kiruki' },
+  { id: 'mf5', category: 'microfibras', src: '/assets/products/microfibras/L1240459.png', title: 'Microfibras Kiruki' },
+  { id: 'mf6', category: 'microfibras', src: '/assets/products/microfibras/L1240429.png', title: 'Microfibras Kiruki' },
+  { id: 'mf7', category: 'microfibras', src: '/assets/products/microfibras/L1240464.png', title: 'Microfibras Kiruki' },
+  { id: 'mf8', category: 'microfibras', src: '/assets/products/microfibras/L1240454.png', title: 'Microfibras Kiruki' },
+  { id: 'mf9', category: 'microfibras', src: '/assets/products/microfibras/L1240431.png', title: 'Microfibras Kiruki' },
+  { id: 'mf10', category: 'microfibras', src: '/assets/products/microfibras/L1240433.png', title: 'Microfibras Kiruki' },
+  { id: 'mf11', category: 'microfibras', src: '/assets/products/microfibras/L1240434.png', title: 'Microfibras Kiruki' },
+  { id: 'mf12', category: 'microfibras', src: '/assets/products/microfibras/L1240435.png', title: 'Microfibras Kiruki' },
+  { id: 'mf13', category: 'microfibras', src: '/assets/products/microfibras/L1240436.png', title: 'Microfibras Kiruki' },
+  { id: 'mf14', category: 'microfibras', src: '/assets/products/microfibras/L1240437.png', title: 'Microfibras Kiruki' },
+  { id: 'mf15', category: 'microfibras', src: '/assets/products/microfibras/L1240438.png', title: 'Microfibras Kiruki' },
+  { id: 'mf16', category: 'microfibras', src: '/assets/products/microfibras/L1240439.png', title: 'Microfibras Kiruki' },
+  { id: 'mf17', category: 'microfibras', src: '/assets/products/microfibras/L1240440.png', title: 'Microfibras Kiruki' },
+  { id: 'mf18', category: 'microfibras', src: '/assets/products/microfibras/L1240441.png', title: 'Microfibras Kiruki' },
+  { id: 'mf19', category: 'microfibras', src: '/assets/products/microfibras/L1240442.png', title: 'Microfibras Kiruki' },
+  { id: 'mf20', category: 'microfibras', src: '/assets/products/microfibras/L1240430.png', title: 'Microfibras Kiruki' },
+];
+
+export const DISTRIBUTORS = [
+  {
+    id: 'd1',
+    user: 'James Carter',
+    role: 'CEO, TechNova Solutions',
+    image: '/assets/feedback-1.jpg',
+    comment: 'Trabajar con Kiruki transformó la variedad en nuestras librerías. Su creatividad y calidad en cada producto superan siempre nuestras expectativas.',
+  },
+  {
+    id: 'd2',
+    user: 'Sarah Mitchell',
+    role: 'Directora de Marketing, Green Organics',
+    image: '/assets/feedback-2.jpg',
+    comment: 'El equipo de Kiruki entiende perfectamente cómo ofrecer productos escolares atractivos y duraderos. Altamente profesionales y confiables.',
+  },
+  {
+    id: 'd3',
+    user: 'Anita Roy',
+    role: 'Fundadora, Roy Lápices & Papel',
+    image: '/assets/feedback-3.jpg',
+    comment: 'Desde el catálogo hasta la entrega, el proceso fue impecable. Nuestros clientes aman los marcadores y pasteles al óleo.',
+  },
+  {
+    id: 'd4',
+    user: 'David Kim',
+    role: 'Gerente de Marca, Urban Pulse',
+    image: '/assets/feedback-1.jpg',
+    comment: 'Kiruki nos ayudó a renovar el inventario escolar con diseños vibrantes y una calidad superior. ¡Nos encanta la colaboración!',
+  },
+];

@@ -2371,10 +2371,14 @@ header{
 
 /* Hero Section 2.0 */
 .hero-modern {
-    padding-top: 7rem;
-    padding-bottom: 4rem;
+    min-height: 100vh;
+    align-content: center;
+    padding-top: 6rem;
+    padding-bottom: 3rem;
     position: relative;
     background: linear-gradient(180deg, #fafafa 0%, #ffffff 100%);
+    box-sizing: border-box;
+    scroll-margin-top: 0;
 }
 
 .hero-badge {
@@ -2408,6 +2412,7 @@ header{
 .gradient-text {
     background: linear-gradient(135deg, #111111 0%, #666666 50%, #111111 100%);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -2828,5 +2833,27 @@ header{
 
 .btn-reset-search {
     margin: 0 auto;
+}
+
+/* Secciones a pantalla completa (100vh) sin alterar el ancho ni el diseño de los componentes */
+#inicio,
+#productos,
+#nosotros,
+#distribuidores,
+#contacto {
+    min-height: 100vh;
+    scroll-margin-top: 80px;
+    box-sizing: border-box;
+}
+
+#nosotros {
+    align-content: center;
+}
+
+#distribuidores,
+#contacto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 

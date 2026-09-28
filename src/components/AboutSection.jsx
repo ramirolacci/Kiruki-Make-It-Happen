@@ -13,12 +13,13 @@ export default function AboutSection() {
       gsap.from('.about__image img', {
         scrollTrigger: {
           trigger: '.about__image',
-          start: 'top 80%',
+          start: 'top 75%',
           toggleActions: 'play none none reverse',
         },
-        x: -60,
+        x: -70,
         opacity: 0,
-        duration: 1.2,
+        duration: 1.3,
+        delay: 0.15,
         ease: 'power3.out',
       });
 
@@ -26,13 +27,14 @@ export default function AboutSection() {
       gsap.from('.about__content > *', {
         scrollTrigger: {
           trigger: '.about__content',
-          start: 'top 80%',
+          start: 'top 75%',
           toggleActions: 'play none none reverse',
         },
-        y: 40,
+        y: 50,
         opacity: 0,
-        stagger: 0.2,
-        duration: 0.9,
+        stagger: 0.25,
+        duration: 1.1,
+        delay: 0.25,
         ease: 'power3.out',
       });
     }, sectionRef);

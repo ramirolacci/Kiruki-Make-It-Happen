@@ -46,16 +46,17 @@ export default function ProductsSection() {
     const ctx = gsap.context(() => {
       gsap.fromTo(
         '.product__header-content > *',
-        { y: 30, opacity: 0 },
+        { y: 45, opacity: 0 },
         {
           scrollTrigger: {
             trigger: '.product__header-content',
-            start: 'top 90%',
+            start: 'top 75%',
           },
           y: 0,
           opacity: 1,
-          stagger: 0.1,
-          duration: 0.7,
+          stagger: 0.15,
+          duration: 1.1,
+          delay: 0.1,
           ease: 'power3.out',
           clearProps: 'transform,opacity'
         }
@@ -63,15 +64,16 @@ export default function ProductsSection() {
 
       gsap.fromTo(
         '.product__search-bar',
-        { y: 20, opacity: 0 },
+        { y: 35, opacity: 0 },
         {
           scrollTrigger: {
             trigger: '.product__search-bar',
-            start: 'top 90%',
+            start: 'top 75%',
           },
           y: 0,
           opacity: 1,
-          duration: 0.7,
+          duration: 1.0,
+          delay: 0.25,
           ease: 'power3.out',
           clearProps: 'transform,opacity'
         }
@@ -79,16 +81,17 @@ export default function ProductsSection() {
 
       gsap.fromTo(
         '.product__filters .filter__btn',
-        { y: 20, opacity: 0 },
+        { y: 30, opacity: 0 },
         {
           scrollTrigger: {
             trigger: '.product__filters',
-            start: 'top 90%',
+            start: 'top 75%',
           },
           y: 0,
           opacity: 1,
-          stagger: 0.02,
-          duration: 0.5,
+          stagger: 0.04,
+          duration: 0.8,
+          delay: 0.35,
           ease: 'power2.out',
           clearProps: 'transform,opacity'
         }

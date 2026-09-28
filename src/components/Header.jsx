@@ -8,20 +8,26 @@ export default function Header() {
     const ctx = gsap.context(() => {
       gsap.fromTo(
         ['.header__content h1', '.header__content .section__description', '.hero-actions a', '.hero-features-strip .feature-item'],
-        { y: 30, opacity: 0 },
+        { y: 40, opacity: 0 },
         {
           y: 0,
           opacity: 1,
-          stagger: 0.1,
-          duration: 0.8,
+          stagger: 0.15,
+          duration: 1.1,
+          delay: 0.15,
           ease: 'power3.out',
           clearProps: 'transform,opacity'
         }
       );
       gsap.fromTo(
+        '.header__image',
+        { x: 100, opacity: 0 },
+        { x: 0, opacity: 1, duration: 1.3, delay: 0.2, ease: 'power3.out', clearProps: 'transform,opacity' }
+      );
+      gsap.fromTo(
         '.header__image img',
-        { scale: 0.9, opacity: 0 },
-        { scale: 1, opacity: 1, duration: 1, ease: 'power2.out', clearProps: 'transform,opacity' }
+        { y: 40, opacity: 0, scale: 0.9 },
+        { y: 0, opacity: 1, scale: 1, duration: 1.1, delay: 0.4, ease: 'power2.out', clearProps: 'transform,opacity' }
       );
     }, headerRef);
 

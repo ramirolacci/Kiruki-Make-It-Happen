@@ -18,16 +18,17 @@ export default function DistributorsSection() {
       // Header reveal
       gsap.fromTo(
         '.distributors-header > *',
-        { y: 30, opacity: 0 },
+        { y: 50, opacity: 0 },
         {
           scrollTrigger: {
             trigger: '.distributors-header',
-            start: 'top 90%',
+            start: 'top 75%',
           },
           y: 0,
           opacity: 1,
-          stagger: 0.15,
-          duration: 0.8,
+          stagger: 0.2,
+          duration: 1.1,
+          delay: 0.15,
           ease: 'power3.out',
           clearProps: 'transform,opacity'
         }
@@ -36,15 +37,16 @@ export default function DistributorsSection() {
       // Swiper container reveal
       gsap.fromTo(
         '.distributors-swiper-wrapper',
-        { y: 30, opacity: 0 },
+        { y: 50, opacity: 0 },
         {
           scrollTrigger: {
             trigger: '.distributors-swiper-wrapper',
-            start: 'top 90%',
+            start: 'top 75%',
           },
           y: 0,
           opacity: 1,
-          duration: 0.8,
+          duration: 1.2,
+          delay: 0.3,
           ease: 'power3.out',
           clearProps: 'transform,opacity'
         }

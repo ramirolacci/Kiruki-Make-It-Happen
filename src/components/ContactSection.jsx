@@ -13,16 +13,17 @@ export default function ContactSection() {
       // Header animation
       gsap.fromTo(
         '.banner__header > *',
-        { y: 30, opacity: 0 },
+        { y: 50, opacity: 0 },
         {
           scrollTrigger: {
             trigger: '.banner__header',
-            start: 'top 90%',
+            start: 'top 75%',
           },
           y: 0,
           opacity: 1,
-          stagger: 0.15,
-          duration: 0.8,
+          stagger: 0.2,
+          duration: 1.1,
+          delay: 0.15,
           ease: 'power3.out',
           clearProps: 'transform,opacity'
         }
@@ -31,16 +32,17 @@ export default function ContactSection() {
       // Feature cards staggered reveal
       gsap.fromTo(
         '.feature__card',
-        { y: 30, opacity: 0 },
+        { y: 50, opacity: 0 },
         {
           scrollTrigger: {
             trigger: '.feature__grid',
-            start: 'top 90%',
+            start: 'top 75%',
           },
           y: 0,
           opacity: 1,
-          stagger: 0.15,
-          duration: 0.8,
+          stagger: 0.2,
+          duration: 1.2,
+          delay: 0.3,
           ease: 'power3.out',
           clearProps: 'transform,opacity'
         }

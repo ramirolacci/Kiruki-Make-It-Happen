@@ -9,7 +9,7 @@
   <a href="https://vitejs.dev/"><img src="https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" /></a>
   <a href="https://greensock.com/gsap/"><img src="https://img.shields.io/badge/gsap-%230AE448.svg?style=for-the-badge&logo=gsap&logoColor=white" alt="GSAP" /></a>
   <a href="https://swiperjs.com/"><img src="https://img.shields.io/badge/Swiper-Carousel-6332F6?style=for-the-badge&logo=swiper&logoColor=white" alt="Swiper" /></a>
-  <img src="https://img.shields.io/badge/CSS3-Responsive-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" />
+  <img src="https://img.shields.io/badge/css-%23663399.svg?style=for-the-badge&logo=css&logoColor=white" alt="CSS3" />
 </p>
 
 ---

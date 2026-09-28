@@ -1,6 +1,16 @@
-# 🎨 Kiruki — Make It Happen
+<p align="center">
+  <img src="public/assets/logo.png" alt="Kiruki — Make It Happen" width="340" />
+</p>
 
 > **Plataforma web corporativa y catálogo digital interactivo para productos escolares, de arte y oficina Kiruki.**
+
+<p align="center">
+  <a href="https://react.dev/"><img src="https://img.shields.io/badge/React-18.x-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React" /></a>
+  <a href="https://vitejs.dev/"><img src="https://img.shields.io/badge/Vite-5.x-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" /></a>
+  <a href="https://greensock.com/gsap/"><img src="https://img.shields.io/badge/GSAP-Animation-88CE02?style=for-the-badge&logo=greensock&logoColor=white" alt="GSAP" /></a>
+  <a href="https://swiperjs.com/"><img src="https://img.shields.io/badge/Swiper-Carousel-6332F6?style=for-the-badge&logo=swiper&logoColor=white" alt="Swiper" /></a>
+  <img src="https://img.shields.io/badge/CSS3-Responsive-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" />
+</p>
 
 ---
 

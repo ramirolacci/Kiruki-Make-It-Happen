@@ -1,47 +1,51 @@
-# 🎨 Kiruki - Make It Happen
+# 🎨 Kiruki — Make It Happen
 
-Sitio web corporativo y catálogo de productos al por mayor de **Kiruki**, desarrollado en **React** con **Vite** y gestor de paquetes **pnpm**.
+> **Plataforma web corporativa y catálogo digital interactivo para productos escolares, de arte y oficina Kiruki.**
 
-## 🚀 Requisitos Previos
+---
 
-- [Node.js](https://nodejs.org/) (v18+)
-- [pnpm](https://pnpm.io/) (`npm i -g pnpm`)
+## 📸 Galería del Sitio Web
 
-## 🛠️ Instalación y Desarrollo
+<table width="100%">
+  <tr>
+    <td width="50%" align="center">
+      <img src="public/screenshots/Screenshot_1.png" alt="Kiruki - Inicio / Hero Section" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
+      <br /><sub><b>Hero Principal — Inicio</b></sub>
+    </td>
+    <td width="50%" align="center">
+      <img src="public/screenshots/Screenshot_2.png" alt="Kiruki - Catálogo de Productos" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
+      <br /><sub><b>Catálogo de Productos & Filtros</b></sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center">
+      <img src="public/screenshots/Screenshot_3.png" alt="Kiruki - Quiénes Somos" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
+      <br /><sub><b>Sección Quiénes Somos</b></sub>
+    </td>
+    <td width="50%" align="center">
+      <img src="public/screenshots/Screenshot_4.png" alt="Kiruki - Distribuidores" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
+      <br /><sub><b>Red de Distribuidores Kiruki</b></sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="100%" colspan="2" align="center">
+      <img src="public/screenshots/Screenshot_5.png" alt="Kiruki - Contacto Mayorista" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); max-width: 90%;" />
+      <br /><sub><b>Contacto Mayorista & Canales Directos</b></sub>
+    </td>
+  </tr>
+</table>
 
-1. **Instalar dependencias:**
-   ```bash
-   pnpm install
-   ```
+---
 
-2. **Iniciar servidor local de desarrollo:**
-   ```bash
-   pnpm run dev
-   ```
-   Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
+## ✨ Destacados de la Plataforma
 
-3. **Compilar para producción:**
-   ```bash
-   pnpm run build
-   ```
+* 🎨 **Estética Premium & Glassmorphism:** Interfaz moderna con acabados translúcidos, tipografía limpia y gradientes dinámicos.
+* ⚡ **Animaciones Fluidas (GSAP + ScrollTrigger):** Transiciones suaves y revelación progresiva de elementos al desplazarse.
+* 🔍 **Buscador & Filtros en Tiempo Real:** Filtrado instantáneo por categorías y barra de búsqueda interactiva.
+* 🔄 **Carruseles Interactivos (Swiper.js):** Muestrarios de productos y opiniones de distribuidores con interacción táctil.
+* 📱 **Diseño 100% Responsivo:** Experiencia visualmente equilibrada tanto en escritorio como en dispositivos móviles.
+* 💬 **Contacto Directo por WhatsApp:** Accesos rápidos para clientes mayoristas y descarga directa de catálogo en PDF.
 
-4. **Previsualizar la build de producción:**
-   ```bash
-   pnpm run preview
-   ```
+---
 
-## 📁 Estructura del Proyecto
-
-```text
-Kiruki-Make-It-Happen/
-├── public/                # Archivos estáticos (assets, imágenes, catálogo PDF)
-├── src/
-│   ├── components/        # Componentes React (Navbar, Header, Products, Modal 3D, etc.)
-│   ├── data/              # Base de datos de productos y categorías
-│   ├── App.jsx            # Layout principal
-│   ├── main.jsx           # Punto de entrada de React
-│   └── style.css          # Sistema de diseño y estilos visuales Kiruki 2.0
-├── index.html             # HTML principal montado en Vite
-├── package.json           # Dependencias y scripts de pnpm
-└── vite.config.js         # Configuración de Vite
-```
+© 2026 **Kiruki** — *Make It Happen*. Todos los derechos reservados.
